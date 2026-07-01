@@ -4,356 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How We Work — BlitzAI Solutions</title>
-  <meta name="description" content="From the first 20-minute call to a fully running system — week by week. No discovery that goes nowhere. No SOW that doesn't match delivery.">
+  <meta name="description" content="From discovery call to a running growth system — week by week. Scoped before we build, weekly strategy calls, full ownership handed to you.">
+  <link rel="icon" type="image/svg+xml" href="assets/badge.svg">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
-  <style>
-    /* .hw-hero styling is handled by the shared light theme in style.css */
-
-    /* ─ Timeline ─ */
-    .timeline { padding: 96px 0 80px; background: var(--bg); }
-    .timeline__h2 {
-      font-size: clamp(26px, 3vw, 38px);
-      font-weight: 800; letter-spacing: -0.025em;
-      color: var(--text); line-height: 1.15;
-      margin: 12px 0 10px;
-    }
-    .timeline__intro {
-      font-size: 15px; color: var(--text-2); line-height: 1.7;
-      max-width: 480px; margin-bottom: 64px;
-    }
-    .timeline__items { display: flex; flex-direction: column; }
-    .tl-item {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 0 48px;
-      padding: 40px 0;
-      border-bottom: 1px solid var(--border);
-      position: relative;
-    }
-    .tl-item:last-child { border-bottom: none; }
-    .tl-item__time {
-      font-size: 11px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--blue); padding-top: 4px;
-    }
-    .tl-item__body {}
-    .tl-item__title {
-      font-size: 20px; font-weight: 700;
-      letter-spacing: -0.02em; color: var(--text);
-      margin-bottom: 8px;
-    }
-    .tl-item__sub {
-      font-size: 12px; color: var(--text-3); margin-bottom: 14px;
-    }
-    .tl-item__desc {
-      font-size: 14.5px; color: var(--text-2);
-      line-height: 1.75; margin-bottom: 20px;
-    }
-    .tl-bullets { display: flex; flex-direction: column; gap: 8px; }
-    .tl-bullet {
-      display: flex; align-items: flex-start;
-      gap: 10px; font-size: 13.5px; color: var(--text-2); line-height: 1.5;
-    }
-    .tl-bullet::before {
-      content: ''; width: 5px; height: 5px; border-radius: 50%;
-      background: var(--blue); flex-shrink: 0; margin-top: 7px;
-    }
-
-    /* ─ Principles ─ */
-    .principles { padding: 80px 0; background: var(--bg); }
-    .principles__h2 {
-      font-size: clamp(24px, 2.8vw, 36px);
-      font-weight: 800; letter-spacing: -0.025em;
-      color: var(--text); margin: 12px 0 44px;
-    }
-    .principles__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    .principle-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 24px;
-    }
-    .principle-card__num {
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--blue); margin-bottom: 14px;
-    }
-    .principle-card__title {
-      font-size: 16px; font-weight: 700;
-      color: var(--text); letter-spacing: -0.015em;
-      margin-bottom: 10px;
-    }
-    .principle-card__desc {
-      font-size: 13px; color: var(--text-2); line-height: 1.7;
-    }
-
-    @media (max-width: 768px) {
-      .tl-item { grid-template-columns: 1fr; gap: 6px; }
-      .principles__grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
-<nav class="nav scrolled" id="nav" role="navigation" aria-label="Main navigation">
-  <div class="wrap">
-    <div class="nav__row">
-      <a href="/" class="logo" aria-label="BlitzAI Solutions home">
-        <span class="logo__slash-mark" aria-hidden="true">//</span>
-        <span class="logo__text">Blitz<em>AI</em></span>
-      </a>
-      <ul class="nav__links" role="list">
-        <li><a href="services.html">Services</a></li>
-        <li><a href="how-we-work.html" style="color:#fff">How We Work</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-      <div class="nav__cta">
-        <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn-blue" target="_blank" rel="noopener">Book a Call</a>
-      </div>
-      <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="wrap"><div class="nav__inner">
+    <a href="/" class="brand" aria-label="BlitzAI Solutions home">
+      <img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38">
+      <span class="brand__word"><span class="brand__name">Blitz<em>AI</em></span><span class="brand__sub">SOLUTIONS</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="how-we-work.html" class="active">How We Work</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav__cta"><a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Book a Call</a></div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div></div>
 </nav>
-<nav class="nav__mobile" id="mobile-nav">
-  <a href="services.html">Services</a>
-  <a href="how-we-work.html">How We Work</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="about.html">About</a>
-  <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn-blue" target="_blank" rel="noopener">Book a Strategy Call</a>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="services.html">Services</a><a href="how-we-work.html">How We Work</a><a href="case-studies.html">Case Studies</a><a href="about.html">About</a>
+  <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Book a Strategy Call</a>
 </nav>
 
-<!-- Hero -->
-<section class="hw-hero">
+<section class="subhero">
+  <svg class="subhero__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true"><path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.15)" stroke-width="2"/><path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.09)" stroke-width="2"/></svg>
+  <div class="wrap"><div class="subhero__inner">
+    <span class="eyebrow">How We Work</span>
+    <h1 class="h1 subhero__title">From discovery call<br>to a <span class="blue">running system.</span></h1>
+    <p class="lead subhero__lead">No discovery that leads nowhere. No proposal that doesn't match delivery. Here's exactly how an engagement moves — and what you can count on at every step.</p>
+    <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Start with a Call
+      <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div></div>
+</section>
+
+<!-- Steps -->
+<section class="section">
   <div class="wrap">
-    <div class="hw-hero__inner">
-      <span class="label label--dim">The Process</span>
-      <h1 class="hw-hero__h1">From scope to<br><em>running system.</em></h1>
-      <p class="hw-hero__sub">Here's exactly what happens — week by week — from the moment you book a call to the day you own a fully operational growth system.</p>
-      <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn-blue" target="_blank" rel="noopener">
-        Start with a Strategy Call
-        <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+    <div class="section__head r0"><span class="eyebrow">The Engagement</span><h2 class="h2">Five stages, six weeks,<br>one system that's yours.</h2></div>
+    <div class="steps r0">
+      <div class="step"><div class="step__num">01</div><div><div class="step__title">Discovery &amp; Strategy Call</div><div class="step__when">20 minutes — no pitch</div></div><p class="step__desc">We map your ICP, your current stack, and where revenue leaks. You leave knowing what a real system looks like for your business — and whether we're the right team to build it.</p></div>
+      <div class="step"><div class="step__num">02</div><div><div class="step__title">System Blueprint</div><div class="step__when">Within 48 hours</div></div><p class="step__desc">A written proposal: which layers we build, in what order, on what timeline, and what each will do. Every tool and account created in your name. You approve before anything moves.</p></div>
+      <div class="step"><div class="step__num">03</div><div><div class="step__title">Build</div><div class="step__when">Weeks 1–4</div></div><p class="step__desc">We engineer the system — positioning, sequences, AI agents, CRM, automations, dashboards. First pipeline starts moving inside two weeks, with a strategy call every week.</p></div>
+      <div class="step"><div class="step__num">04</div><div><div class="step__title">Launch &amp; Optimize</div><div class="step__when">Weeks 4–6</div></div><p class="step__desc">The full system goes live. We read the data and tune it — targeting, messaging, qualification, conversion — until it's at full velocity. Nothing set-and-forget.</p></div>
+      <div class="step"><div class="step__num">05</div><div><div class="step__title">Ownership</div><div class="step__when">Yours to keep</div></div><p class="step__desc">Every account, domain, and asset is registered in your business name, documented, and handed over with training. Keep running it yourself, or keep us on to optimize.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Timeline -->
-<section class="timeline">
+<!-- Principles (commitments) -->
+<section class="section section--paper2">
   <div class="wrap">
-    <span class="label">Step by Step</span>
-    <h2 class="timeline__h2">Six weeks from first call<br>to full system velocity.</h2>
-    <p class="timeline__intro">No endless discovery. No SOW that takes three weeks to write. We move fast, communicate weekly, and hand over a system that's already running.</p>
-
-    <div class="timeline__items">
-      <div class="tl-item">
-        <div class="tl-item__time">Week 0</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">Strategy Call</div>
-          <div class="tl-item__sub">20 minutes — no pitch, no upsell</div>
-          <p class="tl-item__desc">We look at your current setup, your ICP, and where leads are slipping. You'll walk away knowing exactly what a real system looks like for your business — and whether we're the right team to build it.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">Current tech stack and process review</li>
-            <li class="tl-bullet">ICP and offer clarity check</li>
-            <li class="tl-bullet">Honest gap assessment — no soft-pedaling</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-item__time">Week 1</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">Proposal + Scope</div>
-          <div class="tl-item__sub">Delivered within 48 hours</div>
-          <p class="tl-item__desc">A written proposal with an itemized build scope, week-by-week timeline, and the exact investment. No surprises. You approve before we touch anything.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">Itemized deliverables — no vague line items</li>
-            <li class="tl-bullet">Every tool, domain, and account named upfront</li>
-            <li class="tl-bullet">All registered in your business name from day one</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-item__time">Weeks 1–2</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">Foundation Setup</div>
-          <div class="tl-item__sub">Infrastructure before anything goes live</div>
-          <p class="tl-item__desc">GHL sub-account configured, domains purchased and warming, inboxes set up, integrations wired. CRM pipeline architecture built to match how you actually sell. First leads begin flowing by end of week two.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">GHL sub-account setup under your business name</li>
-            <li class="tl-bullet">Sending domains purchased and warm-up protocols started</li>
-            <li class="tl-bullet">Pipeline architecture, stages, and lead scoring configured</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-item__time">Weeks 2–4</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">System Build</div>
-          <div class="tl-item__sub">All channels, all layers</div>
-          <p class="tl-item__desc">AI agents trained on your offer and objections. Outbound sequences written and live. Inbound ads running with AI qualification on every lead. Nurture drips triggered by behavior. Weekly sync every Friday without exception.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">AI SDR agents trained and tested in your accounts</li>
-            <li class="tl-bullet">Cold email, LinkedIn, and SMS sequences live</li>
-            <li class="tl-bullet">Meta ads running with full lead capture and routing</li>
-            <li class="tl-bullet">Nurture drips active for every ICP segment</li>
-            <li class="tl-bullet">Weekly Friday sync — data, decisions, next steps</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-item__time">Weeks 4–6</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">Iteration + Optimization</div>
-          <div class="tl-item__sub">Data drives every change</div>
-          <p class="tl-item__desc">Full system live. We review real performance data and iterate — sequence open rates, ad efficiency, AI qualification accuracy, reply-to-booking rates. Every change tied to a number that moved.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">Full attribution tracking by channel and source</li>
-            <li class="tl-bullet">A/B testing across sequences and ad creative</li>
-            <li class="tl-bullet">Performance dashboard live and shared with your team</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-item__time">Day 90+</div>
-        <div class="tl-item__body">
-          <div class="tl-item__title">Full Ownership Transfer</div>
-          <div class="tl-item__sub">Everything yours — it always was</div>
-          <p class="tl-item__desc">Every account, domain, contact list, sequence, and automation handed over with full documentation and team training. The system runs without us. Ongoing retainer available if you want us to stay in.</p>
-          <ul class="tl-bullets">
-            <li class="tl-bullet">Complete asset and account transfer</li>
-            <li class="tl-bullet">Team training sessions on day-to-day operations</li>
-            <li class="tl-bullet">SOPs and documentation in your format of choice</li>
-            <li class="tl-bullet">Optional ongoing optimization retainer</li>
-          </ul>
-        </div>
-      </div>
+    <div class="section__head r0"><span class="eyebrow">What You Can Count On</span><h2 class="h2">How we operate,<br>every engagement.</h2></div>
+    <div class="commit r0">
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>Scoped before we build.</b> You see the full plan and price before anything starts — no surprises at invoice.</p></div>
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>Weekly strategy calls.</b> Every week — data reviewed, decisions made, next week planned. An operating meeting, not a status update.</p></div>
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>Built in your accounts.</b> Every domain, tool, and contact registered in your name from day one.</p></div>
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>We stay until it works.</b> We don't hand over a system that isn't running. If something underperforms, we rebuild it.</p></div>
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>Everything documented.</b> Every workflow and sequence written in plain language. Your team can run it without us.</p></div>
+      <div class="commit__item"><svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><p class="commit__text"><b>Straight talk.</b> If an ad isn't converting or a play has a structural problem, we say so. No optimism theater.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Principles -->
-<section class="principles">
-  <div class="wrap">
-    <span class="label">How We Operate</span>
-    <h2 class="principles__h2">What you can count on,<br>every engagement.</h2>
-    <div class="principles__grid">
-      <div class="principle-card">
-        <div class="principle-card__num">01</div>
-        <h3 class="principle-card__title">Weekly calls. No exceptions.</h3>
-        <p class="principle-card__desc">Every Friday, you get a sync. Data reviewed, decisions made, next week planned. Not a status update — an operating meeting. If we're not in it, we're not building it right.</p>
-      </div>
-      <div class="principle-card">
-        <div class="principle-card__num">02</div>
-        <h3 class="principle-card__title">Built in your accounts.</h3>
-        <p class="principle-card__desc">Every tool, domain, and sequence is registered in your business name from day one. When the engagement ends, you walk away with everything. No proprietary platform, no lock-in.</p>
-      </div>
-      <div class="principle-card">
-        <div class="principle-card__num">03</div>
-        <h3 class="principle-card__title">We scope before we build.</h3>
-        <p class="principle-card__desc">You see the full scope — itemized, priced, timed — before we start. No surprises at invoice. No scope changes without your sign-off. What we propose is what we deliver.</p>
-      </div>
-      <div class="principle-card">
-        <div class="principle-card__num">04</div>
-        <h3 class="principle-card__title">We stay until it works.</h3>
-        <p class="principle-card__desc">We don't hand over a system that isn't running. If the first sequence underperforms, we rewrite it. If the AI agent needs another training pass, we do it. Full velocity before handover.</p>
-      </div>
-      <div class="principle-card">
-        <div class="principle-card__num">05</div>
-        <h3 class="principle-card__title">Everything is documented.</h3>
-        <p class="principle-card__desc">Every workflow, every prompt, every sequence logic is documented in plain language. Your team can run this without us. That's the point.</p>
-      </div>
-      <div class="principle-card">
-        <div class="principle-card__num">06</div>
-        <h3 class="principle-card__title">We tell you when it's not working.</h3>
-        <p class="principle-card__desc">If an ad isn't converting or a sequence has a structural problem, we say so. No spin, no optimism theater. You get the data and our honest read on what to do next.</p>
-      </div>
-    </div>
-  </div>
+<section class="section">
+  <div class="wrap"><div class="cta__panel r0">
+    <svg class="cta__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true"><path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.14)" stroke-width="2"/><path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.09)" stroke-width="2"/></svg>
+    <span class="eyebrow">Step One</span>
+    <h2 class="h2 cta__title">Book the<br><span class="blue">discovery call.</span></h2>
+    <p class="lead cta__lead">No commitment, no deck. We'll tell you exactly what your system needs — and whether we're the right people to build it.</p>
+    <div class="cta__btns"><a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Book a Strategy Call</a><a href="services.html" class="btn btn--ghost">See what we build</a></div>
+  </div></div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-section__bg" aria-hidden="true"></div>
+<footer class="foot">
   <div class="wrap">
-    <div class="cta-section__inner">
-      <span class="label label--dim">Step one</span>
-      <h2 class="cta-section__h2">Book the<br><em>20-minute call.</em></h2>
-      <p class="cta-section__sub">No commitment. No pitch deck. We'll tell you what your system needs — and whether we're the right people to build it.</p>
-      <div class="cta-section__btns">
-        <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn-blue" target="_blank" rel="noopener">
-          Book a Strategy Call
-          <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <a href="services.html" class="btn btn-ghost-light">See our services</a>
-      </div>
-      <p class="cta-section__note">No pitch. No proposal before we understand your situation.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-  <div class="wrap">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <div class="footer__brand-logo">
-          <span class="logo__slash-mark" aria-hidden="true" style="color:var(--blue)">//</span>
-          <span class="footer__brand-name">BlitzAI Solutions</span>
-        </div>
-        <p class="footer__brand-desc">B2B sales infrastructure — inbound, outbound, AI agents, CRM, and nurture automations. Built inside your accounts. Owned by you.</p>
-        <div class="footer__brand-legal">
-          <div>BlitzAI Solutions LLC &mdash; Registered in Delaware</div>
-          <div>251 Little Falls Drive, Wilmington, DE 19808</div>
-          <div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div>
-        </div>
-      </div>
+    <div class="foot__grid">
       <div>
-        <div class="footer__col-label">Services</div>
-        <ul class="footer__links">
-          <li><a href="services.html#inbound">Inbound Engine</a></li>
-          <li><a href="services.html#outbound">Outbound Engine</a></li>
-          <li><a href="services.html#ai-agents">AI Agents</a></li>
-          <li><a href="services.html#crm">CRM + GHL</a></li>
-          <li><a href="services.html#nurture">Nurture Sequences</a></li>
-        </ul>
+        <a href="/" class="brand" aria-label="BlitzAI Solutions home"><img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38"><span class="brand__word"><span class="brand__name">Blitz<em>AI</em></span><span class="brand__sub">SOLUTIONS</span></span></a>
+        <p class="foot__brand-desc">The growth system your B2B revenue runs on — engineered as one system, owned by you.</p>
+        <div class="foot__legal"><div>BlitzAI Solutions LLC — Registered in Delaware</div><div>251 Little Falls Drive, Wilmington, DE 19808</div><div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div></div>
       </div>
-      <div>
-        <div class="footer__col-label">Company</div>
-        <ul class="footer__links">
-          <li><a href="how-we-work.html">How We Work</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer__col-label">Legal</div>
-        <ul class="footer__links">
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
-      </div>
+      <div><div class="foot__col-label">Services</div><ul class="foot__links"><li><a href="services.html#gtm">Go-to-Market</a></li><li><a href="services.html#demand">Demand Generation</a></li><li><a href="services.html#outbound">Outbound</a></li><li><a href="services.html#ai">AI Agents</a></li><li><a href="services.html#crm">CRM &amp; RevOps</a></li></ul></div>
+      <div><div class="foot__col-label">Company</div><ul class="foot__links"><li><a href="how-we-work.html">How We Work</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="foot__col-label">Legal</div><ul class="foot__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li></ul></div>
     </div>
-    <div class="footer__bottom">
-      <span>&copy; 2025 BlitzAI Solutions LLC. All rights reserved.</span>
-      <a href="/">← Back to home</a>
-    </div>
+    <div class="foot__bottom"><span>&copy; 2025 BlitzAI Solutions LLC. All rights reserved.</span><a href="/">← Back to home</a></div>
   </div>
 </footer>
 
