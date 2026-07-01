@@ -48,7 +48,7 @@
   --f-body:    'Inter', system-ui, -apple-system, sans-serif;
 
   --max: 1200px;
-  --nh: 72px;
+  --nh: 88px;
   --radius: 16px;
 }
 
@@ -199,7 +199,7 @@ ul, ol { list-style: none; }
   border-bottom-color: var(--line-2);
   box-shadow: 0 1px 24px rgba(14,18,32,0.05);
 }
-.nav__inner { display: flex; align-items: center; justify-content: space-between; height: var(--nh); }
+.nav__inner { display: flex; align-items: center; justify-content: space-between; height: var(--nh); padding-top: 8px; }
 .nav__links { display: flex; align-items: center; gap: 2px; }
 .nav__links a {
   font-size: 14.5px; font-weight: 500; color: var(--body);
@@ -442,7 +442,7 @@ ul, ol { list-style: none; }
   .step { grid-template-columns: 56px 180px 1fr; gap: 24px; }
 }
 @media (max-width: 760px) {
-  :root { --nh: 62px; }
+  :root { --nh: 74px; }
   .wrap { padding: 0 20px; }
   .nav__links, .nav__cta { display: none; }
   .burger { display: flex; }
