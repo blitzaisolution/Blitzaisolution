@@ -107,7 +107,7 @@ document.querySelectorAll('.faq__q').forEach(btn => {
         '<div class="pop__title">Want more customers<br>without more <span style="color:var(--blue)">busywork?</span></div>' +
         '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a growth system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
         '<div class="pop__btns">' +
-          '<a href="get-started.html" class="btn btn--primary">Get Started</a>' +
+          '<a href="contact.html" class="btn btn--primary">Get in Touch</a>' +
           '<button class="pop__later">Maybe later</button>' +
         '</div>' +
       '</div>';
