@@ -497,6 +497,10 @@ ul, ol { list-style: none; }
 .embed-shell iframe { width: 100%; border: none; display: block; }
 .embed-shell--bare { background: transparent; border: none; padding: 0; box-shadow: 0 30px 60px -20px rgba(14,18,32,0.14), 0 12px 24px -8px rgba(14,18,32,0.08); border-radius: 22px; }
 .embed-shell--bare iframe { border-radius: 22px; }
+
+/* Raw form host: no visual container, iframe grows freely with GHL form_embed.js */
+.funnel-form { max-width: 760px; margin: 0 auto; }
+.funnel-form iframe { width: 100%; border: none; display: block; background: transparent; }
 .embed-trust { max-width: 880px; margin: 22px auto 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 30px; }
 .embed-trust span { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
 .embed-trust svg { color: var(--blue); flex-shrink: 0; }
