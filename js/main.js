@@ -1,5 +1,5 @@
 /* ============================================================
-   BlitzAI Solutions — Main JS v4
+   BlitzAI Solutions · Main JS v4
    ============================================================ */
 
 /* Activate scroll-reveal styling only when JS is present */
@@ -72,3 +72,64 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     }
   });
 });
+
+/* ============ CTA popup (marketing pages, once per session) ============ */
+(function () {
+  if (document.body.dataset.pop !== '1') return;
+  var KEY = 'bz-pop-seen';
+  try { if (sessionStorage.getItem(KEY)) return; } catch (e) { return; }
+
+  var shown = false;
+  function show() {
+    if (shown) return;
+    shown = true;
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+
+    var wrap = document.createElement('div');
+    wrap.className = 'pop';
+    wrap.setAttribute('role', 'dialog');
+    wrap.setAttribute('aria-modal', 'true');
+    wrap.setAttribute('aria-label', 'Book a free strategy call');
+    wrap.innerHTML =
+      '<div class="pop__back"></div>' +
+      '<div class="pop__card">' +
+        '<svg class="pop__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true">' +
+          '<path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.13)" stroke-width="2"/>' +
+          '<path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.07)" stroke-width="2"/>' +
+        '</svg>' +
+        '<button class="pop__x" aria-label="Close">' +
+          '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>' +
+        '</button>' +
+        '<img class="pop__badge" src="assets/badge.svg" alt="" width="42" height="42">' +
+        '<span class="pop__eyebrow">Free 20-Minute Strategy Call</span>' +
+        '<div class="pop__title">Want more customers<br>without more <span style="color:var(--blue)">busywork?</span></div>' +
+        '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a growth system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
+        '<div class="pop__btns">' +
+          '<a href="get-started.html" class="btn btn--primary">Get Started</a>' +
+          '<button class="pop__later">Maybe later</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+    setTimeout(function () { wrap.classList.add("pop--in"); }, 30);
+
+    function close() {
+      wrap.classList.remove('pop--in');
+      document.removeEventListener('keydown', onEsc);
+      setTimeout(function () { wrap.remove(); }, 420);
+    }
+    function onEsc(e) { if (e.key === 'Escape') close(); }
+    wrap.querySelector('.pop__back').addEventListener('click', close);
+    wrap.querySelector('.pop__x').addEventListener('click', close);
+    wrap.querySelector('.pop__later').addEventListener('click', close);
+    document.addEventListener('keydown', onEsc);
+  }
+
+  setTimeout(show, 14000);
+  window.addEventListener('scroll', function onScroll() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max > 0 && window.scrollY / max > 0.45) {
+      window.removeEventListener('scroll', onScroll);
+      show();
+    }
+  }, { passive: true });
+})();

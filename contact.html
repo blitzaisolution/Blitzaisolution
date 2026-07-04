@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact · BlitzAI Solutions</title>
-  <meta name="description" content="Book a strategy call or reach the BlitzAI Solutions team. We reply to every inquiry the same day.">
+  <meta name="description" content="Reach the BlitzAI Solutions team by phone, email, or the contact form. We reply to every inquiry the same day.">
   <link rel="icon" type="image/svg+xml" href="assets/badge.svg">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <script src="js/main.js?v=6" defer></script>
   <style>
     .contact-grid { display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 40px; align-items: start; }
     .cinfo { display: flex; flex-direction: column; gap: 4px; }
@@ -15,8 +15,10 @@
     .cinfo__label { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
     .cinfo__value { font-size: 16px; color: var(--ink); font-weight: 500; }
     .cinfo__value a:hover { color: var(--blue); }
-    .booking-embed { background: var(--paper-2); border: 1px solid var(--line-2); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); min-height: 640px; }
-    .booking-embed iframe { width: 100%; min-height: 640px; border: none; display: block; }
+    .cinfo__hint { color: var(--muted); font-size: 13px; font-weight: 400; }
+    .form-embed { background: var(--paper-2); border: 1px solid var(--line-2); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .form-embed iframe { width: 100%; min-height: 756px; border: none; display: block; }
+    .form-note { margin-top: 14px; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-align: center; }
     @media (max-width:860px){ .contact-grid{ grid-template-columns:1fr; gap:28px; } }
   </style>
 </head>
@@ -34,13 +36,13 @@
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
-    <div class="nav__cta"><a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Book a Call</a></div>
+    <div class="nav__cta"><a href="get-started.html" class="btn btn--primary">Book a Call</a></div>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div></div>
 </nav>
 <nav class="mobile-nav" id="mobile-nav">
   <a href="services.html">Services</a><a href="how-we-work.html">How We Work</a><a href="case-studies.html">Case Studies</a><a href="about.html">About</a>
-  <a href="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" class="btn btn--primary" target="_blank" rel="noopener">Book a Strategy Call</a>
+  <a href="get-started.html" class="btn btn--primary">Book a Strategy Call</a>
 </nav>
 
 <section class="subhero">
@@ -48,7 +50,7 @@
   <div class="wrap"><div class="subhero__inner">
     <span class="eyebrow">Contact</span>
     <h1 class="h1 subhero__title">Let's talk about<br>your <span class="blue">growth system.</span></h1>
-    <p class="lead subhero__lead">Book a strategy call below, or reach us directly. We reply to every inquiry the same day.</p>
+    <p class="lead subhero__lead">Call, email, or send the form below. We reply to every inquiry the same day.</p>
   </div></div>
 </section>
 
@@ -58,8 +60,16 @@
       <div>
         <div class="cinfo">
           <div class="cinfo__item">
-            <div class="cinfo__label">Email</div>
-            <div class="cinfo__value"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div>
+            <div class="cinfo__label">Phone</div>
+            <div class="cinfo__value"><a href="tel:+13026001255">+1 (302) 600-1255</a></div>
+          </div>
+          <div class="cinfo__item">
+            <div class="cinfo__label">Contact Email</div>
+            <div class="cinfo__value"><a href="mailto:franco@theblitzaisolutions.com">franco@theblitzaisolutions.com</a><br><span class="cinfo__hint">Sales and general inquiries</span></div>
+          </div>
+          <div class="cinfo__item">
+            <div class="cinfo__label">Direct Email</div>
+            <div class="cinfo__value"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a><br><span class="cinfo__hint">Projects and fulfilment</span></div>
           </div>
           <div class="cinfo__item">
             <div class="cinfo__label">Office</div>
@@ -67,7 +77,7 @@
           </div>
           <div class="cinfo__item">
             <div class="cinfo__label">Entity</div>
-            <div class="cinfo__value">BlitzAI Solutions LLC<br><span style="color:var(--muted);font-size:14px;font-weight:400">Registered in Delaware, USA</span></div>
+            <div class="cinfo__value">BlitzAI Solutions LLC<br><span class="cinfo__hint">Registered in Delaware, USA</span></div>
           </div>
           <div class="cinfo__item" style="border-bottom:none">
             <div class="cinfo__label">Follow</div>
@@ -81,10 +91,28 @@
       </div>
 
       <div>
-        <div class="eyebrow" style="margin-bottom:16px">Book a Strategy Call</div>
-        <div class="booking-embed">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/FhHip2ojx57pCDo7znUd" scrolling="no" title="Book a strategy call with BlitzAI Solutions" loading="lazy"></iframe>
+        <div class="eyebrow" style="margin-bottom:16px">Send Us a Message</div>
+        <div class="form-embed">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/oMYbr2WpBfLBjFfMlvQL"
+            style="width:100%;height:100%;border:none;border-radius:0px;min-height:756px"
+            id="inline-oMYbr2WpBfLBjFfMlvQL"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Blitz Ai Solution LLC Form"
+            data-height="756"
+            data-layout-iframe-id="inline-oMYbr2WpBfLBjFfMlvQL"
+            data-form-id="oMYbr2WpBfLBjFfMlvQL"
+            title="Blitz Ai Solution LLC Form"
+            loading="lazy">
+          </iframe>
         </div>
+        <div class="form-note">After you submit, a couple of quick questions, then you pick a time.</div>
       </div>
     </div>
   </div>
@@ -96,7 +124,7 @@
       <div>
         <a href="/" class="brand" aria-label="BlitzAI Solutions home"><img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38"><span class="brand__word"><span class="brand__name">Blitz<em>AI</em></span><span class="brand__sub">SOLUTIONS</span></span></a>
         <p class="foot__brand-desc">We build the system that brings you customers, then hand it over in your name. You make more, spend less, and own all of it.</p>
-        <div class="foot__legal"><div>BlitzAI Solutions LLC, registered in Delaware</div><div>16 West 68th Street, New York, NY 10023</div><div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div></div>
+        <div class="foot__legal"><div>BlitzAI Solutions LLC, registered in Delaware</div><div>16 West 68th Street, New York, NY 10023</div><div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div><div><a href="tel:+13026001255">+1 (302) 600-1255</a></div></div>
       </div>
       <div><div class="foot__col-label">Services</div><ul class="foot__links"><li><a href="services.html#gtm">Go-to-Market</a></li><li><a href="services.html#demand">Demand Generation</a></li><li><a href="services.html#outbound">Outbound</a></li><li><a href="services.html#ai">AI Agents</a></li><li><a href="services.html#crm">CRM &amp; RevOps</a></li></ul></div>
       <div><div class="foot__col-label">Company</div><ul class="foot__links"><li><a href="how-we-work.html">How We Work</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
@@ -106,7 +134,7 @@
   </div>
 </footer>
 
-
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 <!-- Live chat widget (GoHighLevel) -->
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a42f4f26112ba37bb643a66"></script>
 </body>
