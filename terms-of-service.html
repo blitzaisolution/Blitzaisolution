@@ -10,16 +10,28 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
   <style>
-    .legal { max-width: 760px; margin: 0 auto; }
-    .legal__meta { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 40px; }
-    .legal h2 { font-family: var(--f-display); font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); margin: 38px 0 12px; }
-    .legal p, .legal li { font-size: 15px; color: var(--body); line-height: 1.75; }
+    .legal { max-width: 780px; margin: 0 auto; }
+    .legal__meta { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 34px; line-height: 1.7; }
+    .legal__meta b { color: var(--ink); font-weight: 700; }
+    .legal h2 { font-family: var(--f-display); font-weight: 700; font-size: 23px; letter-spacing: -0.02em; color: var(--ink); margin: 46px 0 10px; padding-top: 30px; border-top: 1px solid var(--line-2); }
+    .legal h2:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
+    .legal h3 { font-family: var(--f-display); font-weight: 600; font-size: 16.5px; letter-spacing: -0.01em; color: var(--ink); margin: 26px 0 10px; }
+    .legal p, .legal li { font-size: 15px; color: var(--body); line-height: 1.78; }
     .legal p { margin-bottom: 14px; }
-    .legal ul { margin: 0 0 14px 0; display: flex; flex-direction: column; gap: 8px; }
-    .legal li { padding-left: 20px; position: relative; }
-    .legal li::before { content: ''; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+    .legal strong, .legal b { color: var(--ink); font-weight: 600; }
+    .legal ul { margin: 0 0 16px 0; display: flex; flex-direction: column; gap: 9px; }
+    .legal li { padding-left: 22px; position: relative; }
+    .legal li::before { content: ''; position: absolute; left: 2px; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
     .legal a { color: var(--blue); }
     .legal a:hover { text-decoration: underline; }
+    .legal__box { background: var(--paper-2); border: 1px solid var(--line-2); border-left: 3px solid var(--blue); border-radius: 12px; padding: 20px 22px; margin: 6px 0 20px; }
+    .legal__box p { margin: 0 0 12px; line-height: 1.8; font-size: 13.5px; letter-spacing: 0.01em; }
+    .legal__box p:last-child { margin-bottom: 0; }
+    .legal__def { margin: 0 0 14px; }
+    .legal__def b { color: var(--ink); font-weight: 700; }
+    .legal__contact { background: var(--paper-2); border: 1px solid var(--line-2); border-radius: 14px; padding: 24px 26px; margin: 8px 0 4px; }
+    .legal__contact p { margin: 0; line-height: 1.75; }
+    .legal__foot-note { font-size: 13px; color: var(--muted); font-style: italic; margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line-2); }
   </style>
 </head>
 <body>
@@ -55,33 +67,369 @@
 <section class="section" style="padding-top:20px">
   <div class="wrap">
     <div class="legal">
-      <div class="legal__meta">Last updated: 1 July 2025 · BlitzAI Solutions LLC</div>
+      <div class="legal__meta">
+        <b>BlitzAI Solutions LLC</b><br>
+        Effective Date: July 4, 2026 &nbsp;·&nbsp; Last Updated: July 4, 2026
+      </div>
 
-      <p>These Terms of Service ("Terms") govern your use of the website at <a href="https://theblitzaisolutions.com">theblitzaisolutions.com</a> and any services provided by BlitzAI Solutions LLC ("BlitzAI," "we," "us," or "our"). By using the site, you agree to these Terms.</p>
+      <h2>1. Agreement to Terms</h2>
+      <p>These Terms of Service ("Terms") govern your access to and use of the website located at <a href="https://theblitzaisolutions.com">theblitzaisolutions.com</a> (the "Website"), and any services, proposals, or engagements provided by BlitzAI Solutions LLC ("BlitzAI," "we," "us," or "our").</p>
+      <p>By accessing the Website, submitting a form, engaging our services, or entering into a written agreement with us, you ("you," "Client," or "User") agree to be bound by these Terms and by our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+      <p>If you do not agree with these Terms, do not use the Website or our services.</p>
+      <p>These Terms constitute a legally binding agreement between you and BlitzAI. If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have authority to bind that entity.</p>
 
-      <h2>Use of the site</h2>
-      <p>You may use this site for lawful purposes only. You agree not to misuse it, interfere with its operation, or attempt to access it in any way other than through the interface we provide.</p>
+      <h2>2. Definitions</h2>
+      <p class="legal__def"><b>"Agreement":</b> collectively, these Terms of Service, our Privacy Policy, and any signed proposal, statement of work, or master services agreement between you and BlitzAI.</p>
+      <p class="legal__def"><b>"Client":</b> the business entity that engages BlitzAI to provide Services under a signed proposal or agreement.</p>
+      <p class="legal__def"><b>"Deliverables":</b> the systems, workflows, automations, documentation, campaigns, sequences, contact lists, dashboards, integrations, and other work product delivered by BlitzAI under a Services engagement.</p>
+      <p class="legal__def"><b>"Services":</b> the sales, marketing, lead-generation, AI automation, CRM setup, revenue operations, and related consulting and implementation services provided by BlitzAI.</p>
+      <p class="legal__def"><b>"Third-Party Services":</b> the tools, platforms, and vendors used in delivering the Services, including but not limited to GoHighLevel, Clay, Apollo, Instantly, HeyReach, Meta, LinkedIn, Google, Stripe, and DocuSign.</p>
+      <p class="legal__def"><b>"Website":</b> the website located at theblitzaisolutions.com and any related subdomains.</p>
 
-      <h2>Services &amp; engagements</h2>
-      <p>Information on this site is for general purposes and does not constitute an offer or a binding commitment. Any engagement is governed by a separate written agreement that defines scope, deliverables, timelines, and fees. Where those terms conflict with this page, the signed agreement controls.</p>
+      <h2>3. About BlitzAI</h2>
+      <p>BlitzAI is a Delaware limited liability company with its registered agent at 251 Little Falls Drive, Wilmington, DE 19808, and its principal place of business at 16 West 68th Street, New York, NY 10023.</p>
+      <p>We build, configure, and operate lead generation, qualification, booking, and revenue operations systems on behalf of business clients. We are not a law firm, a tax advisor, an investment advisor, or an accounting firm. Nothing on the Website or in our Services constitutes legal, tax, investment, or accounting advice.</p>
 
-      <h2>Intellectual property</h2>
-      <p>The content, branding, and design of this site are owned by BlitzAI Solutions LLC and are protected by applicable law. You may not copy, reproduce, or reuse them without our permission. Assets we build for a client under an engagement are owned by that client as set out in the applicable agreement.</p>
+      <h2>4. Services</h2>
 
-      <h2>Third-party links &amp; tools</h2>
-      <p>Our site may link to or embed third-party services (for example, our scheduling platform). We are not responsible for the content or practices of those third parties, and your use of them is governed by their own terms.</p>
+      <h3>4.1 Scope of Services</h3>
+      <p>The specific Services provided to a Client will be described in a written proposal, statement of work, or master services agreement signed by both parties (the "Service Agreement"). In the event of a conflict between these Terms and a Service Agreement, the terms of the Service Agreement control with respect to the specific engagement.</p>
+      <p>Services may include, but are not limited to:</p>
+      <ul>
+        <li>Go-to-market strategy and positioning</li>
+        <li>Ideal customer profile (ICP) definition and account strategy</li>
+        <li>Lead sourcing, data enrichment, and list building</li>
+        <li>Multi-channel outbound campaigns (email, LinkedIn, SMS, cold calling integration)</li>
+        <li>Landing page and lead capture funnel development</li>
+        <li>AI sales agents and automated qualification systems</li>
+        <li>CRM setup, configuration, and management (typically GoHighLevel)</li>
+        <li>Marketing automation, nurture flows, and follow-up sequences</li>
+        <li>Reporting dashboards and revenue analytics</li>
+        <li>Content creation and search or answer-engine optimization</li>
+        <li>Domain warm-up and email deliverability management</li>
+      </ul>
 
-      <h2>Disclaimer</h2>
-      <p>The site and its content are provided "as is" without warranties of any kind, express or implied. We do not guarantee that the site will be uninterrupted, error-free, or that any particular result will be achieved.</p>
+      <h3>4.2 Services Are Not Guaranteed to Produce Specific Results</h3>
+      <p>BlitzAI's Services are designed to engineer the conditions for lead generation, qualification, and pipeline growth. However, we do not guarantee any specific number of leads, meetings, opportunities, closed deals, revenue, or return on investment unless expressly stated in a signed Service Agreement with defined milestones and refund provisions.</p>
+      <p>Business results depend on many factors outside of our control, including but not limited to Client's product, pricing, sales team capability, market conditions, macroeconomic factors, and timing.</p>
 
-      <h2>Limitation of liability</h2>
-      <p>To the fullest extent permitted by law, BlitzAI Solutions LLC will not be liable for any indirect, incidental, or consequential damages arising from your use of the site.</p>
+      <h3>4.3 Client Obligations</h3>
+      <p>To enable us to deliver Services, Client agrees to:</p>
+      <ul>
+        <li>Provide accurate and complete information about the Client's business, offer, ICP, and existing systems</li>
+        <li>Provide timely access to accounts, data, tools, and personnel as reasonably required</li>
+        <li>Respond to communications and approval requests within the timeframes specified in the Service Agreement</li>
+        <li>Pay all fees when due</li>
+        <li>Comply with all applicable laws (including anti-spam, telemarketing, data protection, and advertising laws)</li>
+        <li>Ensure that any contact lists, data, or content provided to BlitzAI were lawfully obtained and may be lawfully used for the intended purposes</li>
+        <li>Not use the Services for any illegal, deceptive, harmful, or infringing purpose</li>
+      </ul>
+      <p>Delays caused by Client's failure to meet these obligations may extend timelines and may not entitle Client to a refund or credit.</p>
 
-      <h2>Changes</h2>
-      <p>We may update these Terms from time to time. Continued use of the site after changes take effect constitutes acceptance of the revised Terms.</p>
+      <h2>5. Fees and Payment</h2>
 
-      <h2>Contact</h2>
-      <p>BlitzAI Solutions LLC<br>251 Little Falls Drive, Wilmington, DE 19808<br><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></p>
+      <h3>5.1 Pricing</h3>
+      <p>All fees for Services are set forth in the signed Service Agreement between BlitzAI and Client. Pricing typically consists of:</p>
+      <ul>
+        <li><strong>Setup fee:</strong> a one-time or milestone-based fee for the initial build of the system</li>
+        <li><strong>Monthly retainer:</strong> a recurring fee for ongoing management, optimization, and reporting</li>
+        <li><strong>Performance components:</strong> where applicable, revenue share or performance-based fees agreed in writing</li>
+      </ul>
+
+      <h3>5.2 Payment Terms</h3>
+      <ul>
+        <li>Invoices are payable in United States Dollars unless otherwise agreed in writing.</li>
+        <li>Setup fees are typically due at signing or according to the milestone schedule in the Service Agreement.</li>
+        <li>Monthly retainers are billed in advance and are due on the first business day of each billing period.</li>
+        <li>Payment is due within seven (7) days of invoice date unless otherwise specified.</li>
+        <li>Overdue amounts accrue interest at the lesser of 1.5% per month or the maximum rate permitted by law.</li>
+        <li>Client is responsible for all taxes, duties, and levies (excluding taxes based on BlitzAI's net income).</li>
+      </ul>
+
+      <h3>5.3 Third-Party Software Costs</h3>
+      <p>Third-Party Services (such as GoHighLevel subscriptions, Clay credits, sending infrastructure, or communication providers) are billed directly to Client by the third-party vendor, or reimbursed to BlitzAI, and are separate from BlitzAI's fees. These costs are disclosed in the Service Agreement.</p>
+
+      <h3>5.4 Refunds</h3>
+      <p>Except where expressly provided in a signed Service Agreement (for example, milestone-based refund provisions or a pilot guarantee), all fees paid to BlitzAI are non-refundable.</p>
+
+      <h3>5.5 Suspension for Non-Payment</h3>
+      <p>If Client fails to pay any undisputed amount within fifteen (15) days of the due date, BlitzAI may suspend performance of Services until payment is received. Suspension does not relieve Client of the obligation to pay for the Services already performed.</p>
+
+      <h2>6. Ownership of Deliverables</h2>
+
+      <h3>6.1 Client Owns the System</h3>
+      <p>A defining principle of BlitzAI's business is that Client owns the Deliverables. Upon full payment of all fees owed under the Service Agreement, BlitzAI assigns to Client all right, title, and interest in and to:</p>
+      <ul>
+        <li>The GoHighLevel workspace, CRM records, pipeline configurations, and workflows built for Client</li>
+        <li>The sending domains, phone numbers, and communication accounts registered in Client's name</li>
+        <li>The email sequences, LinkedIn messages, SMS scripts, and other content written specifically for Client</li>
+        <li>The contact lists, enriched data, and campaign data compiled specifically for Client</li>
+        <li>The AI SDR configurations, qualification logic, and knowledge base trained on Client's offer</li>
+        <li>The dashboards, reports, and documentation delivered as part of the engagement</li>
+      </ul>
+
+      <h3>6.2 BlitzAI Retains Rights to Its Methodology</h3>
+      <p>BlitzAI retains all right, title, and interest in and to:</p>
+      <ul>
+        <li>Its proprietary methodologies, frameworks, know-how, and general processes for building outbound and revenue systems</li>
+        <li>Any pre-existing intellectual property, templates, tools, code, or documentation that BlitzAI incorporates into the Deliverables</li>
+        <li>Aggregated, anonymized performance data used to improve BlitzAI's Services</li>
+      </ul>
+      <p>BlitzAI grants Client a perpetual, worldwide, non-exclusive, royalty-free license to use any such pre-existing intellectual property to the extent necessary for Client to use, operate, and maintain the Deliverables.</p>
+
+      <h3>6.3 Third-Party Services Terms Apply</h3>
+      <p>Client's use of Third-Party Services (such as GoHighLevel, Clay, or Meta) is subject to the terms and conditions of those third-party providers. BlitzAI does not control and is not responsible for the terms, availability, or performance of any Third-Party Services.</p>
+
+      <h2>7. Confidentiality</h2>
+
+      <h3>7.1 Confidential Information</h3>
+      <p>Each party may receive information from the other that is marked as confidential, or that a reasonable person would understand to be confidential given the nature of the information and the circumstances of disclosure ("Confidential Information"). Confidential Information includes but is not limited to:</p>
+      <ul>
+        <li>Business strategies, financial information, and pricing</li>
+        <li>Customer lists, contact data, and ICP definitions</li>
+        <li>Proprietary tools, methodologies, and know-how</li>
+        <li>Product roadmaps, marketing plans, and unreleased offerings</li>
+        <li>The existence and terms of the Service Agreement</li>
+      </ul>
+
+      <h3>7.2 Obligations</h3>
+      <p>Each party agrees to:</p>
+      <ul>
+        <li>Use Confidential Information solely for the purpose of performing under the Service Agreement</li>
+        <li>Protect Confidential Information with the same care it uses to protect its own confidential information, and in no case less than a reasonable standard of care</li>
+        <li>Limit disclosure of Confidential Information to employees, contractors, and advisors with a legitimate need to know, who are bound by confidentiality obligations at least as protective as these Terms</li>
+        <li>Not use Confidential Information to compete with the disclosing party</li>
+      </ul>
+
+      <h3>7.3 Exceptions</h3>
+      <p>Confidential Information does not include information that:</p>
+      <ul>
+        <li>Was known to the receiving party prior to disclosure</li>
+        <li>Is or becomes publicly available through no fault of the receiving party</li>
+        <li>Is independently developed by the receiving party without reference to the Confidential Information</li>
+        <li>Is rightfully received from a third party without a duty of confidentiality</li>
+        <li>Is required to be disclosed by law, court order, or governmental authority (in which case, the receiving party will give the disclosing party prompt notice where legally permitted)</li>
+      </ul>
+
+      <h3>7.4 Duration</h3>
+      <p>Confidentiality obligations survive for five (5) years after the termination of the Service Agreement, or indefinitely for trade secrets.</p>
+
+      <h2>8. Data Protection</h2>
+
+      <h3>8.1 Client Data</h3>
+      <p>To the extent BlitzAI processes personal data on behalf of Client (for example, contact data provided by Client, or contact data collected on Client's behalf through outbound campaigns), the parties agree as follows:</p>
+      <ul>
+        <li>Client is the controller (or business, under CCPA) of such personal data</li>
+        <li>BlitzAI is the processor (or service provider) acting on Client's documented instructions</li>
+        <li>Client is responsible for obtaining any consents, notices, and legal bases required by applicable data protection laws (including GDPR, UK GDPR, CCPA/CPRA, CAN-SPAM, TCPA, and CASL)</li>
+        <li>BlitzAI will process personal data only as necessary to provide the Services</li>
+        <li>BlitzAI will implement reasonable technical and organizational security measures</li>
+        <li>BlitzAI will assist Client with data subject rights requests, breach notifications, and impact assessments as reasonably required by law</li>
+      </ul>
+
+      <h3>8.2 Data Processing Agreement</h3>
+      <p>For Clients whose engagement involves processing of personal data subject to GDPR, UK GDPR, or CCPA/CPRA, the parties will execute a separate Data Processing Agreement (DPA) that supplements these Terms.</p>
+
+      <h3>8.3 Client Warranty</h3>
+      <p>Client warrants that any contact lists, customer data, or other personal information provided to BlitzAI or collected on Client's behalf was lawfully obtained and may be lawfully used for the intended purposes (including for cold outreach, marketing, or sales activity as applicable).</p>
+
+      <h2>9. Warranties and Disclaimers</h2>
+
+      <h3>9.1 Mutual Warranties</h3>
+      <p>Each party warrants that:</p>
+      <ul>
+        <li>It has full legal capacity and authority to enter into and perform its obligations under the Agreement</li>
+        <li>Its execution and performance will not violate any other agreement or applicable law</li>
+      </ul>
+
+      <h3>9.2 BlitzAI Warranties</h3>
+      <p>BlitzAI warrants that Services will be performed in a professional and workmanlike manner consistent with industry standards for similar services.</p>
+
+      <h3>9.3 Disclaimer of Other Warranties</h3>
+      <div class="legal__box">
+        <p>EXCEPT AS EXPRESSLY PROVIDED IN THESE TERMS OR A SIGNED SERVICE AGREEMENT, THE WEBSITE AND THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+        <p>BLITZAI DOES NOT WARRANT THAT:</p>
+        <p>&bull; THE WEBSITE OR SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE<br>
+        &bull; THE RESULTS OBTAINED FROM THE SERVICES WILL BE ACCURATE, RELIABLE, OR MEET ANY SPECIFIC PERFORMANCE TARGETS<br>
+        &bull; ANY ERRORS OR DEFECTS WILL BE CORRECTED<br>
+        &bull; DELIVERABLES WILL PRODUCE ANY SPECIFIC NUMBER OF LEADS, MEETINGS, OPPORTUNITIES, OR REVENUE</p>
+      </div>
+
+      <h2>10. Limitation of Liability</h2>
+
+      <h3>10.1 Exclusion of Certain Damages</h3>
+      <div class="legal__box">
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL BLITZAI BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF BUSINESS OPPORTUNITY, LOSS OF DATA, OR BUSINESS INTERRUPTION, EVEN IF BLITZAI HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+      </div>
+
+      <h3>10.2 Cap on Direct Damages</h3>
+      <div class="legal__box">
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, BLITZAI'S TOTAL AGGREGATE LIABILITY UNDER OR IN CONNECTION WITH THE AGREEMENT, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WILL NOT EXCEED THE TOTAL FEES PAID BY CLIENT TO BLITZAI UNDER THE APPLICABLE SERVICE AGREEMENT DURING THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO THE CLAIM.</p>
+      </div>
+
+      <h3>10.3 Exceptions</h3>
+      <p>The limitations in Section 10.1 and 10.2 do not apply to:</p>
+      <ul>
+        <li>A party's indemnification obligations under Section 11</li>
+        <li>A party's breach of confidentiality obligations under Section 7</li>
+        <li>Fraud, gross negligence, or willful misconduct</li>
+        <li>Any liability that cannot be limited or excluded under applicable law</li>
+      </ul>
+
+      <h3>10.4 Basis of the Bargain</h3>
+      <p>Client acknowledges that the limitations of liability in this Section 10 are a material basis of the bargain between the parties and that the fees for the Services would be substantially higher absent these limitations.</p>
+
+      <h2>11. Indemnification</h2>
+
+      <h3>11.1 Indemnification by Client</h3>
+      <p>Client agrees to defend, indemnify, and hold harmless BlitzAI, its affiliates, and their respective officers, directors, employees, contractors, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+      <ul>
+        <li>Client's breach of these Terms or any Service Agreement</li>
+        <li>Client's violation of any applicable law or regulation</li>
+        <li>Client's infringement of any third-party intellectual property, privacy, or other rights</li>
+        <li>Client's products, services, or business</li>
+        <li>Client's provision of unlawfully obtained data or content to BlitzAI</li>
+        <li>Any claims by third parties (including but not limited to recipients of outbound communications) arising from Client's use of the Deliverables</li>
+      </ul>
+
+      <h3>11.2 Indemnification by BlitzAI</h3>
+      <p>BlitzAI agrees to defend, indemnify, and hold harmless Client from and against third-party claims that BlitzAI's Deliverables, as delivered and used in accordance with these Terms and the Service Agreement, infringe such third party's registered US intellectual property rights. This indemnity does not apply to claims arising from:</p>
+      <ul>
+        <li>Modifications to the Deliverables made by anyone other than BlitzAI</li>
+        <li>Combinations of the Deliverables with materials not provided by BlitzAI</li>
+        <li>Use of the Deliverables in violation of these Terms or applicable law</li>
+        <li>Content or data provided by Client</li>
+      </ul>
+
+      <h3>11.3 Procedure</h3>
+      <p>The indemnified party will promptly notify the indemnifying party of any claim, cooperate reasonably with the defense, and not settle any claim without the indemnifying party's prior written consent.</p>
+
+      <h2>12. Term and Termination</h2>
+
+      <h3>12.1 Term</h3>
+      <p>These Terms are effective when you first access the Website or engage our Services and continue until terminated as provided in this Section.</p>
+      <p>The term of any Services engagement is set forth in the applicable Service Agreement.</p>
+
+      <h3>12.2 Termination for Convenience</h3>
+      <p>Either party may terminate a Services engagement for convenience with thirty (30) days' prior written notice, unless the Service Agreement specifies a fixed term.</p>
+
+      <h3>12.3 Termination for Cause</h3>
+      <p>Either party may terminate immediately upon written notice if the other party:</p>
+      <ul>
+        <li>Materially breaches these Terms or the Service Agreement and fails to cure such breach within fifteen (15) days after written notice</li>
+        <li>Becomes insolvent, files for bankruptcy, or ceases to do business</li>
+      </ul>
+
+      <h3>12.4 Effect of Termination</h3>
+      <p>Upon termination:</p>
+      <ul>
+        <li>Client will pay all fees earned by BlitzAI up to the date of termination</li>
+        <li>BlitzAI will deliver the then-current state of Deliverables to Client</li>
+        <li>Each party will return or destroy the other party's Confidential Information (except as required to be retained by law)</li>
+        <li>Sections that by their nature should survive termination will survive, including Sections 6 (Ownership), 7 (Confidentiality), 9 (Warranties), 10 (Limitation of Liability), 11 (Indemnification), and 13 (Governing Law)</li>
+      </ul>
+
+      <h2>13. Governing Law and Dispute Resolution</h2>
+
+      <h3>13.1 Governing Law</h3>
+      <p>These Terms and any Services provided are governed by the laws of the State of Delaware, United States, without regard to its conflict of law principles.</p>
+
+      <h3>13.2 Jurisdiction</h3>
+      <p>The parties consent to the exclusive jurisdiction of the state and federal courts located in Delaware for any dispute that is not required to be arbitrated under Section 13.3.</p>
+
+      <h3>13.3 Informal Dispute Resolution</h3>
+      <p>Before initiating any formal proceeding, the parties agree to attempt in good faith to resolve any dispute through direct negotiation for at least thirty (30) days.</p>
+
+      <h3>13.4 Waiver of Class Actions</h3>
+      <div class="legal__box">
+        <p>TO THE FULLEST EXTENT PERMITTED BY LAW, EACH PARTY WAIVES ANY RIGHT TO PARTICIPATE IN A CLASS ACTION, CLASS ARBITRATION, OR OTHER REPRESENTATIVE ACTION AGAINST THE OTHER PARTY.</p>
+      </div>
+
+      <h3>13.5 Injunctive Relief</h3>
+      <p>Notwithstanding the above, either party may seek injunctive or other equitable relief in any court of competent jurisdiction to protect its intellectual property or confidential information.</p>
+
+      <h2>14. Use of the Website</h2>
+
+      <h3>14.1 Permitted Use</h3>
+      <p>You may access and use the Website only for lawful purposes and in accordance with these Terms.</p>
+
+      <h3>14.2 Prohibited Conduct</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Website in any way that violates applicable law or regulation</li>
+        <li>Attempt to gain unauthorized access to any portion of the Website, other user accounts, or any systems or networks</li>
+        <li>Use any robot, spider, scraper, or other automated means to access the Website except for search engine indexing</li>
+        <li>Introduce viruses, malware, or other harmful code</li>
+        <li>Interfere with or disrupt the operation of the Website</li>
+        <li>Reverse engineer, decompile, or attempt to derive source code from any portion of the Website</li>
+        <li>Impersonate any person or misrepresent your identity or affiliation</li>
+        <li>Use the Website to send unsolicited communications or advertisements to others</li>
+      </ul>
+
+      <h3>14.3 Intellectual Property in the Website</h3>
+      <p>The Website and all content, features, and functionality (including but not limited to text, graphics, logos, images, and software) are the exclusive property of BlitzAI or its licensors and are protected by copyright, trademark, and other intellectual property laws. You may not copy, reproduce, distribute, modify, or create derivative works from any part of the Website without our prior written consent, except as expressly permitted by these Terms.</p>
+
+      <h2>15. Marketing Communications and Consent</h2>
+      <p>By providing your contact information through the Website and checking the applicable consent box, you consent to receive marketing and promotional communications from BlitzAI Solutions LLC via email, SMS, and phone at the contact details you provide. Message and data rates may apply. Message frequency varies. You may opt out at any time by:</p>
+      <ul>
+        <li>Replying <strong>STOP</strong> to any SMS message</li>
+        <li>Clicking the "unsubscribe" link in any marketing email</li>
+        <li>Contacting us at <a href="mailto:franco@theblitzaisolutions.com">franco@theblitzaisolutions.com</a></li>
+      </ul>
+      <p>For full details, see our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+      <h2>16. Third-Party Services</h2>
+      <p>The Website and the Services may integrate with or link to third-party websites, tools, and platforms. BlitzAI is not responsible for the content, availability, terms, or privacy practices of any third party. Your use of any Third-Party Service is subject to the terms of that third party.</p>
+
+      <h2>17. General Provisions</h2>
+
+      <h3>17.1 Entire Agreement</h3>
+      <p>These Terms, together with the Privacy Policy and any signed Service Agreement, constitute the entire agreement between the parties and supersede all prior or contemporaneous agreements, whether oral or written, on the same subject.</p>
+
+      <h3>17.2 Amendments</h3>
+      <p>BlitzAI may amend these Terms from time to time. Material changes will be posted on the Website with an updated "Last Updated" date. Your continued use of the Website or Services after changes take effect constitutes acceptance of the amended Terms.</p>
+
+      <h3>17.3 Waiver</h3>
+      <p>The failure of either party to enforce any right or provision of these Terms will not be deemed a waiver of that right or provision. Any waiver must be in writing and signed by the waiving party.</p>
+
+      <h3>17.4 Severability</h3>
+      <p>If any provision of these Terms is held invalid or unenforceable by a court of competent jurisdiction, that provision will be enforced to the maximum extent permissible, and the remaining provisions will remain in full force and effect.</p>
+
+      <h3>17.5 Assignment</h3>
+      <p>Client may not assign these Terms or any Service Agreement, in whole or in part, without BlitzAI's prior written consent. BlitzAI may assign these Terms and any Service Agreement to an affiliate or to a successor in connection with a merger, acquisition, or sale of substantially all of its assets.</p>
+
+      <h3>17.6 Force Majeure</h3>
+      <p>Neither party will be liable for any delay or failure to perform (other than payment obligations) resulting from causes beyond its reasonable control, including but not limited to natural disasters, war, terrorism, riots, embargoes, government actions, pandemic, labor disputes, internet outages, or failures of Third-Party Services.</p>
+
+      <h3>17.7 Independent Contractors</h3>
+      <p>The parties are independent contractors. Nothing in these Terms creates a partnership, joint venture, employment relationship, or agency relationship between the parties. Neither party has authority to bind the other.</p>
+
+      <h3>17.8 Notices</h3>
+      <p>All notices under these Terms must be in writing and delivered by email to the addresses listed below, or by any other means agreed by the parties. Notices are deemed received on the next business day after sending.</p>
+      <ul>
+        <li><strong>To BlitzAI:</strong> <a href="mailto:franco@theblitzaisolutions.com">franco@theblitzaisolutions.com</a></li>
+        <li><strong>To Client:</strong> the email address on file for Client</li>
+      </ul>
+
+      <h3>17.9 Headings</h3>
+      <p>Section headings are for convenience only and do not affect interpretation.</p>
+
+      <h3>17.10 Counterparts and Electronic Signatures</h3>
+      <p>Any Service Agreement may be executed in counterparts and by electronic signature. Electronic signatures have the same legal effect as handwritten signatures.</p>
+
+      <h2>18. Contact</h2>
+      <p>If you have questions about these Terms, please contact:</p>
+      <div class="legal__contact">
+        <p>
+          <strong>BlitzAI Solutions LLC</strong><br>
+          16 West 68th Street<br>
+          New York, NY 10023<br>
+          United States<br><br>
+          Email: <a href="mailto:franco@theblitzaisolutions.com">franco@theblitzaisolutions.com</a>
+        </p>
+      </div>
+
+      <p class="legal__foot-note">By using the Website or engaging our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
     </div>
   </div>
 </section>
@@ -92,13 +440,13 @@
       <div>
         <a href="/" class="brand" aria-label="BlitzAI Solutions home"><img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38"><span class="brand__word"><span class="brand__name">Blitz<em>AI</em></span><span class="brand__sub">SOLUTIONS</span></span></a>
         <p class="foot__brand-desc">We build the system that brings you customers, then hand it over in your name. You make more, spend less, and own all of it.</p>
-        <div class="foot__legal"><div>BlitzAI Solutions LLC, registered in Delaware</div><div>251 Little Falls Drive, Wilmington, DE 19808</div><div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div></div>
+        <div class="foot__legal"><div>BlitzAI Solutions LLC, registered in Delaware</div><div>16 West 68th Street, New York, NY 10023</div><div style="margin-top:8px"><a href="mailto:syed@theblitzaisolutions.com">syed@theblitzaisolutions.com</a></div></div>
       </div>
       <div><div class="foot__col-label">Services</div><ul class="foot__links"><li><a href="services.html#gtm">Go-to-Market</a></li><li><a href="services.html#demand">Demand Generation</a></li><li><a href="services.html#outbound">Outbound</a></li><li><a href="services.html#ai">AI Agents</a></li><li><a href="services.html#crm">CRM &amp; RevOps</a></li></ul></div>
       <div><div class="foot__col-label">Company</div><ul class="foot__links"><li><a href="how-we-work.html">How We Work</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><div class="foot__col-label">Legal</div><ul class="foot__links"><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-of-service.html">Terms of Service</a></li></ul></div>
     </div>
-    <div class="foot__bottom"><span>&copy; 2025 BlitzAI Solutions LLC. All rights reserved.</span><a href="/">← Back to home</a></div>
+    <div class="foot__bottom"><span>&copy; 2026 BlitzAI Solutions LLC. All rights reserved.</span><a href="/">← Back to home</a></div>
   </div>
 </footer>
 
