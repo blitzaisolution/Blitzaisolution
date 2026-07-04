@@ -78,6 +78,8 @@ document.querySelectorAll('.faq__q').forEach(btn => {
   if (document.body.dataset.pop !== '1') return;
   var KEY = 'bz-pop-seen';
   try { if (sessionStorage.getItem(KEY)) return; } catch (e) { return; }
+  /* Wait for cookie banner to be dismissed before firing the CTA modal */
+  try { if (!localStorage.getItem('bz-cookie-consent')) return; } catch (e) { return; }
 
   var shown = false;
   function show() {
@@ -132,4 +134,44 @@ document.querySelectorAll('.faq__q').forEach(btn => {
       show();
     }
   }, { passive: true });
+})();
+
+/* ============ Cookie consent banner (global, persistent choice) ============ */
+(function () {
+  var KEY = 'bz-cookie-consent';
+  try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
+
+  function build() {
+    if (!document.body) return setTimeout(build, 40);
+    /* Don't show on legal pages themselves (would be circular / awkward) */
+    var path = location.pathname.split('/').pop();
+    if (path === 'privacy-policy.html' || path === 'terms-of-service.html') return;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'cc';
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', 'Cookie consent');
+    wrap.innerHTML =
+      '<div class="cc__card">' +
+        '<div class="cc__head">' +
+          '<span class="cc__eyebrow">Cookies</span>' +
+        '</div>' +
+        '<div class="cc__title">A quick word before you scroll.</div>' +
+        '<p class="cc__text">We use cookies to keep the site running smoothly and to understand how visitors use it. You can accept all, or just the ones we need to make things work. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>' +
+        '<div class="cc__actions">' +
+          '<button class="cc__btn cc__accept" type="button">Accept all</button>' +
+          '<button class="cc__btn cc__reject" type="button">Essentials only</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(wrap);
+
+    function set(choice) {
+      try { localStorage.setItem(KEY, choice); } catch (e) {}
+      wrap.classList.add('cc--out');
+      setTimeout(function () { wrap.remove(); }, 380);
+    }
+    wrap.querySelector('.cc__accept').addEventListener('click', function () { set('accepted'); });
+    wrap.querySelector('.cc__reject').addEventListener('click', function () { set('rejected'); });
+  }
+  build();
 })();
