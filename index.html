@@ -4,15 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BlitzAI Solutions · More Customers, Less Effort</title>
-  <meta name="description" content="We build the whole system that finds your buyers, qualifies them, and books the meetings. Set up in your name and handed to you. More revenue, less time, lower cost.">
+  <meta name="description" content="We build sales systems for B2B companies that want to find the right buyers, automate follow-up and turn more opportunities into qualified meetings.">
   <meta property="og:title" content="BlitzAI Solutions · More Customers, Less Effort">
-  <meta property="og:description" content="The system that brings you customers while you focus on closing them. Built in your name. Owned by you.">
+  <meta property="og:description" content="More customers. Faster pipeline. Less chasing. Sales systems built in your name and owned by you.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theblitzaisolutions.com">
   <link rel="canonical" href="https://theblitzaisolutions.com">
-  <link rel="icon" type="image/svg+xml" href="assets/badge.svg">
-  <link rel="stylesheet" href="css/style.css?v=13">
-  <script src="js/main.js?v=13" defer></script>
+  <link rel="icon" type="image/svg+xml" href="assets/symbol.svg">
+  <link rel="stylesheet" href="css/style.css?v=14">
+  <script src="js/main.js?v=14" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I have to buy the whole thing, or can I start small?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start anywhere. Some clients want the full system, others just need one piece, like outbound, an AI agent, or a proper CRM. We build what moves your numbers, and the parts click together when you're ready for more." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does it cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on what you need, which is why we scope it on the call first. You get a written plan with the full price before anything starts. No packages, no surprises. If budget is tight, tell us and we'll build to it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a CRM or tools already set up?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nope. We build from scratch if you need us to, or work with what you already have. If a tool is doing its job, we keep it. We don't rip out things that work just to sell you ours." }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast will I see results?",
+        "acceptedAnswer": { "@type": "Answer", "text": "First meetings usually start landing within two weeks of kickoff. Full speed tends to hit somewhere between weeks four and eight, depending on the setup. We give you honest timelines in the plan and stick to them." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if we decide to part ways?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You keep everything. Every account, domain, and automation is already in your name. There's no locked platform holding your growth hostage. That's the whole point of how we build." }
+      },
+      {
+        "@type": "Question",
+        "name": "What don't you do?",
+        "acceptedAnswer": { "@type": "Answer", "text": "We do sales and growth systems. Strategy, demand, outbound, AI, CRM, and content. We don't do PR, social media management, or one-off design gigs. If it's outside what we do well, we'll say so and point you to someone better." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-pop="1">
 
@@ -20,30 +58,24 @@
 <nav class="nav" id="nav" aria-label="Main navigation">
   <div class="wrap">
     <div class="nav__inner">
-      <a href="/" class="brand" aria-label="BlitzAI Solutions home">
-        <img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38">
-        <span class="brand__word">
-          <span class="brand__name">Blitz<em>AI</em></span>
-          <span class="brand__sub">SOLUTIONS</span>
-        </span>
+      <a href="/" class="brand nav__pill nav__brandpill" aria-label="Blitz AI Solutions home">
+        <img class="brand__lockup" src="assets/lockup.svg" alt="Blitz AI Solutions">
       </a>
-
-      <ul class="nav__links">
-      <li><a href="/">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="how-we-work.html">How We Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Team</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
+      <div class="nav__pill nav__linkspill">
+        <ul class="nav__links">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
       <div class="nav__cta">
         <a href="get-started.html" class="btn btn--primary">
-          Book a Call
+          Book a free call
           <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
-
       <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -52,40 +84,33 @@
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
   <a href="/">Home</a>
   <a href="services.html">Services</a>
-  <a href="how-we-work.html">How We Work</a>
   <a href="about.html">About</a>
   <a href="team.html">Team</a>
   <a href="contact.html">Contact</a>
-  <a href="get-started.html" class="btn btn--primary">Book a Strategy Call</a>
+  <a href="get-started.html" class="btn btn--primary">Book a free call</a>
 </nav>
 
 
 <!-- ══ HERO ══════════════════════════════════════════════ -->
 <header class="hero">
   <div class="hero__glow" aria-hidden="true"></div>
-  <svg class="hero__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true">
-    <path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.16)" stroke-width="2"/>
-    <path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.10)" stroke-width="2"/>
-  </svg>
+  <img class="hero__nodes" src="assets/symbol.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <div class="hero__inner">
-      <span class="eyebrow">The Growth System Your Revenue Runs On</span>
       <h1 class="h1 hero__title">
         <span class="rv" style="animation-delay:.05s">More</span>
-        <span class="rv" style="animation-delay:.12s">customers.</span><br>
-        <span class="rv blue" style="animation-delay:.20s">Less</span>
-        <span class="rv blue" style="animation-delay:.27s">time</span>
-        <span class="rv blue" style="animation-delay:.34s">and</span>
-        <span class="rv blue" style="animation-delay:.41s">money</span>
-        <span class="rv blue" style="animation-delay:.48s">chasing</span>
-        <span class="rv blue" style="animation-delay:.55s">them.</span>
+        <span class="rv" style="animation-delay:.12s">customers.</span>
+        <span class="rv" style="animation-delay:.22s">Faster</span>
+        <span class="rv" style="animation-delay:.29s">pipeline.</span><br>
+        <span class="rv blue" style="animation-delay:.40s">Less</span>
+        <span class="rv blue" style="animation-delay:.47s">chasing.</span>
       </h1>
       <p class="lead hero__lead">
-        We build and run the whole system that turns strangers into booked calls. The outreach, the AI agents, the follow-up, and the CRM underneath, all shaped around how your business actually sells and set up in your name. One job: bring you more customers for less time and money, while you stay focused on closing them.
+        We build sales systems for B2B companies that want to find the <b>right buyers</b>, automate follow-up and turn more opportunities into <b>qualified meetings</b>.
       </p>
       <div class="hero__cta">
         <a href="get-started.html" class="btn btn--primary">
-          Book a 20-Minute Call
+          Book a free call
           <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="services.html" class="btn btn--ghost">See what we build</a>
@@ -95,35 +120,36 @@
 </header>
 
 
-<!-- ══ CAPABILITY STRIP (dark, blue) ═════════════════════ -->
-<div class="strip" aria-hidden="true">
+<!-- ══ TOOL / PLATFORM STRIP ═════════════════════════════ -->
+<div class="strip" aria-label="Tools and platforms we build on">
+  <div class="strip__label">The tools we build your system on</div>
   <div class="strip__row">
-    <span class="strip__item strip__item--hi">Go-to-Market Strategy<span class="strip__dot"></span></span>
-    <span class="strip__item">Demand Generation<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Outbound &amp; Prospecting<span class="strip__dot"></span></span>
-    <span class="strip__item">AI Sales Agents<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Marketing Automation<span class="strip__dot"></span></span>
-    <span class="strip__item">CRM &amp; Revenue Ops<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Answer-Engine Optimization<span class="strip__dot"></span></span>
-    <span class="strip__item">Content Engine<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Lead Sourcing<span class="strip__dot"></span></span>
-    <span class="strip__item">Nurture Systems<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">GoHighLevel<span class="strip__dot"></span></span>
+    <span class="strip__item">Clay<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Apollo<span class="strip__dot"></span></span>
+    <span class="strip__item">ZoomInfo<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Instantly<span class="strip__dot"></span></span>
+    <span class="strip__item">HeyReach<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">n8n<span class="strip__dot"></span></span>
+    <span class="strip__item">OpenAI<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Claude<span class="strip__dot"></span></span>
+    <span class="strip__item">Meta Ads<span class="strip__dot"></span></span>
     <!-- duplicate for seamless loop -->
-    <span class="strip__item strip__item--hi">Go-to-Market Strategy<span class="strip__dot"></span></span>
-    <span class="strip__item">Demand Generation<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Outbound &amp; Prospecting<span class="strip__dot"></span></span>
-    <span class="strip__item">AI Sales Agents<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Marketing Automation<span class="strip__dot"></span></span>
-    <span class="strip__item">CRM &amp; Revenue Ops<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Answer-Engine Optimization<span class="strip__dot"></span></span>
-    <span class="strip__item">Content Engine<span class="strip__dot"></span></span>
-    <span class="strip__item strip__item--hi">Lead Sourcing<span class="strip__dot"></span></span>
-    <span class="strip__item">Nurture Systems<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">GoHighLevel<span class="strip__dot"></span></span>
+    <span class="strip__item">Clay<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Apollo<span class="strip__dot"></span></span>
+    <span class="strip__item">ZoomInfo<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Instantly<span class="strip__dot"></span></span>
+    <span class="strip__item">HeyReach<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">n8n<span class="strip__dot"></span></span>
+    <span class="strip__item">OpenAI<span class="strip__dot"></span></span>
+    <span class="strip__item strip__item--hi">Claude<span class="strip__dot"></span></span>
+    <span class="strip__item">Meta Ads<span class="strip__dot"></span></span>
   </div>
 </div>
 
 
-<!-- ══ THE PROBLEM ═══════════════════════════════════════ -->
+<!-- ══ THE PROBLEM AND THE SOLUTION ══════════════════════ -->
 <section class="section">
   <div class="wrap">
     <div class="section__head r0">
@@ -139,259 +165,118 @@
         <p>Chasing leads, copy-pasting follow-ups, guessing what's working. When you step away, growth stops. Every hour spent on the busywork is an hour you're not closing.</p>
       </div>
       <div class="tc tc--dark">
-        <span class="eyebrow eyebrow--on-dark">The BlitzAI way</span>
-        <h3 class="h3" style="color:#fff">A system that does it for you</h3>
-        <p style="color:var(--on-dark-2)">One setup that finds buyers, qualifies them, follows up, and books calls on its own. You spend less to win each customer, get your time back, and own the whole thing.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ SERVICES · 6 PILLARS ══════════════════════════════ -->
-<section class="section section--paper3" id="services">
-  <div class="wrap">
-    <div class="section__head r0">
-      <span class="eyebrow">What We Build</span>
-      <h2 class="h2">Six parts. One system<br>that keeps you booked.</h2>
-      <p class="lead">Take one piece or the whole thing. We scope it to what will actually move your numbers, then build and run it inside your accounts.</p>
-    </div>
-
-    <div class="pillars r0">
-      <!-- 01 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 01</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="11" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M11 3v2M11 17v2M3 11h2M17 11h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">Go-to-Market &amp; Positioning</h3>
-        <p class="pillar__desc">Who to sell to, why they should care, and the words that make them pay attention. The groundwork everything else is built on.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">Ideal-customer profile and account strategy</div>
-          <div class="pillar__li">Brand positioning and messaging</div>
-          <div class="pillar__li">Go-to-market plan</div>
-          <div class="pillar__li">Visual and verbal identity direction</div>
-        </div>
-      </article>
-
-      <!-- 02 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 02</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 15V9M8 15V5M13 15v-4M18 15V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 19h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">Demand &amp; Pipeline Generation</h3>
-        <p class="pillar__desc">A steady flow of the right people raising their hand, from ads to content to account-based plays, all measured to real pipeline.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">Full-funnel demand generation</div>
-          <div class="pillar__li">Landing pages and lead capture</div>
-          <div class="pillar__li">Paid and organic acquisition</div>
-          <div class="pillar__li">Account-based programs</div>
-        </div>
-      </article>
-
-      <!-- 03 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 03</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11l14-6-6 14-2.5-5.5L4 11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">Outbound &amp; Prospecting</h3>
-        <p class="pillar__desc">Personal outreach that reads like a human wrote it, built on real buying signals and warm paths, not a blast to ten thousand strangers.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">Lead sourcing and list building</div>
-          <div class="pillar__li">Warm-introduction mapping</div>
-          <div class="pillar__li">Personal multi-channel sequences</div>
-          <div class="pillar__li">Domain warm-up and deliverability</div>
-        </div>
-      </article>
-
-      <!-- 04 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 04</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="7" width="14" height="11" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 3v4M8 12h.01M14 12h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">AI Sales Agents &amp; Automation</h3>
-        <p class="pillar__desc">AI that answers, qualifies, follows up, and books meetings around the clock. Trained on your offer, so it sounds like your team.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">AI sales agents that reply and book</div>
-          <div class="pillar__li">Marketing automation</div>
-          <div class="pillar__li">Follow-up and nurture flows</div>
-          <div class="pillar__li">Handoff to a human at the right moment</div>
-        </div>
-      </article>
-
-      <!-- 05 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 05</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="4" width="16" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h16M7 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">CRM &amp; Revenue Operations</h3>
-        <p class="pillar__desc">The engine room underneath it all. A CRM set up the way you actually sell, with clean data, scoring, and dashboards you can trust.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">CRM setup in GoHighLevel</div>
-          <div class="pillar__li">Integrations across your tools</div>
-          <div class="pillar__li">Lead qualification and scoring</div>
-          <div class="pillar__li">Dashboards and reporting</div>
-        </div>
-      </article>
-
-      <!-- 06 -->
-      <article class="pillar">
-        <div class="pillar__top">
-          <span class="pillar__layer">Part 06</span>
-          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h16M11 3c2.5 2.2 2.5 13.8 0 16M11 3c-2.5 2.2-2.5 13.8 0 16" stroke="currentColor" stroke-width="1.6"/></svg></span>
-        </div>
-        <h3 class="h3 pillar__title">Content &amp; Answer-Engine Optimization</h3>
-        <p class="pillar__desc">Be the name that comes up when buyers search and when AI answers. Content and a site built to get found, quoted, and trusted.</p>
-        <div class="pillar__list">
-          <div class="pillar__li">Answer-engine and search optimization</div>
-          <div class="pillar__li">Content that compounds over time</div>
-          <div class="pillar__li">A website that captures and qualifies</div>
-          <div class="pillar__li">Thought-leadership that builds trust</div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ MANIFESTO (dark accent) ═══════════════════════════ -->
-<section class="manifesto">
-  <svg class="manifesto__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true">
-    <path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(110,155,255,0.16)" stroke-width="2"/>
-    <path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(110,155,255,0.09)" stroke-width="2"/>
-  </svg>
-  <div class="wrap">
-    <div class="manifesto__inner r0">
-      <span class="eyebrow eyebrow--on-dark">Why We Exist</span>
-      <p class="manifesto__text">
-        We're in business to make you money. That means <b>more customers</b>, less time lost to busywork, and less spent to win each one. One system that runs your growth, so you can get back to <span class="blue">running your company.</span>
-      </p>
-      <p class="manifesto__sub">It starts with a call. We learn how you sell, propose a system built for your business, set it up in your name, and hand you full ownership.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ HOW WE WORK ═══════════════════════════════════════ -->
-<section class="section" id="process">
-  <div class="wrap">
-    <div class="section__head r0">
-      <span class="eyebrow">How We Work</span>
-      <h2 class="h2">From first call to<br>a system that runs.</h2>
-      <p class="lead">No endless discovery. No proposal that doesn't match what shows up. Here's exactly how it goes once you book.</p>
-    </div>
-
-    <div class="steps r0">
-      <div class="step">
-        <div class="step__num">01</div>
-        <div>
-          <div class="step__title">The Call</div>
-          <div class="step__when">20 minutes, no pitch</div>
-        </div>
-        <p class="step__desc">We look at how you sell today, where customers are slipping away, and what's costing you time. You leave knowing what a real system would do for your business, and whether we're the right people to build it.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">02</div>
-        <div>
-          <div class="step__title">The Plan</div>
-          <div class="step__when">Back to you in 48 hours</div>
-        </div>
-        <p class="step__desc">A clear, written plan. What we build, in what order, on what timeline, and what it costs. Every tool and account set up in your name. You approve it before anything starts.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">03</div>
-        <div>
-          <div class="step__title">The Build</div>
-          <div class="step__when">Weeks 1 to 4</div>
-        </div>
-        <p class="step__desc">We build the pieces. Messaging, sequences, AI agents, CRM, automations, dashboards. First meetings usually start landing inside two weeks, and we meet every week to keep it moving.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">04</div>
-        <div>
-          <div class="step__title">The Tuning</div>
-          <div class="step__when">Weeks 4 to 6</div>
-        </div>
-        <p class="step__desc">The full system goes live. We watch the numbers and improve what's working, targeting, messaging, timing, until it's running at full speed. Nothing gets set and forgotten.</p>
-      </div>
-      <div class="step">
-        <div class="step__num">05</div>
-        <div>
-          <div class="step__title">It's Yours</div>
-          <div class="step__when">Keys handed over</div>
-        </div>
-        <p class="step__desc">Every account, domain, and asset is already in your name, documented, and explained to your team. Run it yourself, or keep us on to keep improving it. Your call.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ STATS ═════════════════════════════════════════════ -->
-<section class="section--tight section--paper2">
-  <div class="wrap">
-    <div class="section__head r0" style="margin-bottom:40px">
-      <span class="eyebrow">The Short Version</span>
-      <h2 class="h2">Fast to build.<br>Yours to keep.</h2>
-    </div>
-    <div class="stats r0">
-      <div class="stat"><div class="stat__num"><span data-counter="14">0</span></div><div class="stat__label">Days before the first meetings start landing</div></div>
-      <div class="stat"><div class="stat__num">24/7</div><div class="stat__label">Your AI agent replies and books while you sleep</div></div>
-      <div class="stat"><div class="stat__num"><span data-counter="6">0</span></div><div class="stat__label">Parts working together as one system</div></div>
-      <div class="stat"><div class="stat__num stat__num--blue"><span data-counter="100">0</span>%</div><div class="stat__label">Built in your name and owned by you</div></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ COMMITMENTS ═══════════════════════════════════════ -->
-<section class="section">
-  <div class="wrap">
-    <div class="section__head r0">
-      <span class="eyebrow">What You Get From Us</span>
-      <h2 class="h2">The way we work.</h2>
-    </div>
-    <div class="commit r0">
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>You see the plan first.</b> Full scope and price before anything starts. No surprises on the invoice.</p>
-      </div>
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>A call every week.</b> You always know what's happening, what's working, and what's next.</p>
-      </div>
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>Built in your name.</b> Every domain, tool, and contact belongs to you from day one.</p>
-      </div>
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>We stay until it works.</b> If something falls flat, we fix it. You don't get handed a half-built system.</p>
-      </div>
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>Measured on money.</b> We track meetings and revenue, not likes and open rates.</p>
-      </div>
-      <div class="commit__item">
-        <svg class="commit__check" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <p class="commit__text"><b>Straight answers.</b> If something isn't working, we tell you. No spin, no vanity reports.</p>
+        <span class="eyebrow eyebrow--on-dark">The Blitz way</span>
+        <h3 class="h3">A system that does it for you</h3>
+        <p>One setup that finds buyers, qualifies them, follows up, and books calls on its own. You spend less to win each customer, get your time back, and own the whole thing.</p>
       </div>
     </div>
 
     <div class="callout r0">
       <div class="callout__big">100<span>% yours</span></div>
-      <p class="callout__text">We don't hold your data, your audience, or your tools hostage. It's all built in your name from the start, because a growth system you can't keep isn't an asset. It's a rental.</p>
+      <p class="callout__text">We don't hold your data, your audience, or your tools hostage. Every account, domain, and automation is built in your name from the start, because a system you can't keep isn't an asset. It's a rental.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ SIX SERVICE AREAS (overview) ══════════════════════ -->
+<section class="section section--paper3" id="services">
+  <div class="wrap">
+    <div class="section__head r0">
+      <span class="eyebrow">What We Build</span>
+      <h2 class="h2">Six parts, one system<br>that keeps you booked.</h2>
+      <p class="lead">Take one piece or combine them into a tailored system. We scope it to what will actually move your numbers, then build and run it inside your accounts.</p>
+    </div>
+
+    <div class="spills r0" style="margin-bottom:48px">
+      <a class="spill" href="services.html#gtm"><span class="spill__num">01</span>Go-to-Market &amp; Positioning</a>
+      <a class="spill" href="services.html#demand"><span class="spill__num">02</span>Demand &amp; Pipeline Generation</a>
+      <a class="spill" href="services.html#outbound"><span class="spill__num">03</span>Outbound &amp; Prospecting</a>
+      <a class="spill" href="services.html#ai"><span class="spill__num">04</span>AI Sales Agents &amp; Automation</a>
+      <a class="spill" href="services.html#crm"><span class="spill__num">05</span>CRM &amp; Revenue Operations</a>
+      <a class="spill" href="services.html#content"><span class="spill__num">06</span>Content &amp; AEO</a>
+    </div>
+
+    <div class="pillars r0">
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">01</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="11" cy="11" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M11 3v2M11 17v2M3 11h2M17 11h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">Go-to-Market &amp; Positioning</h3>
+        <p class="pillar__desc">Define the target audience, positioning, messaging and go-to-market plan. The groundwork everything else is built on.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">02</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 15V9M8 15V5M13 15v-4M18 15V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M3 19h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">Demand &amp; Pipeline Generation</h3>
+        <p class="pillar__desc">The path from first interest to captured opportunity, through demand generation, landing pages and lead capture.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">03</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11l14-6-6 14-2.5-5.5L4 11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">Outbound &amp; Prospecting</h3>
+        <p class="pillar__desc">Research, list building and personalised multichannel outreach that reaches relevant prospects, not ten thousand strangers.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">04</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="4" y="7" width="14" height="11" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 3v4M8 12h.01M14 12h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">AI Sales Agents &amp; Automation</h3>
+        <p class="pillar__desc">Automated responses, qualification, nurture and follow-up, with a human handoff at exactly the right moment.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">05</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="4" width="16" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h16M7 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">CRM &amp; Revenue Operations</h3>
+        <p class="pillar__desc">Your sales tools connected and organised. Qualification, pipeline management, integrations and reporting you can trust.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar__top">
+          <span class="pillar__layer">06</span>
+          <span class="pillar__icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h16M11 3c2.5 2.2 2.5 13.8 0 16M11 3c-2.5 2.2-2.5 13.8 0 16" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        </div>
+        <h3 class="h3 pillar__title">Content &amp; Answer-Engine Optimisation</h3>
+        <p class="pillar__desc">Useful content, search optimisation and AEO, so you're the name that comes up when buyers search and when AI answers.</p>
+      </article>
+    </div>
+
+    <div class="r0" style="margin-top:44px; display:flex; justify-content:center;">
+      <a href="services.html" class="btn btn--ghost">Explore all six in detail
+        <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ PROCESS (short intro, full version on Services) ═══ -->
+<section class="manifesto" id="process">
+  <img class="manifesto__nodes" src="assets/symbol.svg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="manifesto__inner r0">
+      <span class="eyebrow eyebrow--on-dark">How It Works</span>
+      <p class="manifesto__text">
+        It starts with <b>a call</b>. We learn how you sell, put a plan and price in writing, build the system in <span class="blue">your name</span>, tune it until it runs, then hand you the keys.
+      </p>
+      <p class="manifesto__sub">Five stages: The Call, The Plan, The Build, The Tuning, It's Yours. First meetings usually start landing inside two weeks of kickoff.</p>
+      <div style="margin-top:34px">
+        <a href="services.html#process" class="btn btn--on-dark">See the full process
+          <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
 
 
 <!-- ══ FAQ ═══════════════════════════════════════════════ -->
-<section class="section section--paper3" id="faq">
+<section class="section" id="faq">
   <div class="wrap">
     <div class="faq__layout">
       <div class="r0">
@@ -403,32 +288,32 @@
       <div class="faq__list r0">
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">Do I have to buy the whole thing, or can I start small?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">Start anywhere. Some clients want the full system, others just need one piece, like outbound, an AI agent, or a proper CRM. We build what moves your numbers, and the parts click together when you're ready for more.</p></div>
         </div>
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">What does it cost?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">It depends on what you need, which is why we scope it on the call first. You get a written plan with the full price before anything starts. No packages, no surprises. If budget is tight, tell us and we'll build to it.</p></div>
         </div>
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">Do I need a CRM or tools already set up?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">Nope. We build from scratch if you need us to, or work with what you already have. If a tool is doing its job, we keep it. We don't rip out things that work just to sell you ours.</p></div>
         </div>
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">How fast will I see results?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">First meetings usually start landing within two weeks of kickoff. Full speed tends to hit somewhere between weeks four and eight, depending on the setup. We give you honest timelines in the plan and stick to them.</p></div>
         </div>
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">What if we decide to part ways?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">You keep everything. Every account, domain, and automation is already in your name. There's no locked platform holding your growth hostage. That's the whole point of how we build.</p></div>
         </div>
         <div class="faq__item">
           <button class="faq__q" aria-expanded="false">What don't you do?
-            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#878E9E" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
+            <span class="faq__ic" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="#9aa0ab" stroke-width="1.5" stroke-linecap="round"/></svg></span></button>
           <div class="faq__body"><p class="faq__ans">We do sales and growth systems. Strategy, demand, outbound, AI, CRM, and content. We don't do PR, social media management, or one-off design gigs. If it's outside what we do well, we'll say so and point you to someone better.</p></div>
         </div>
       </div>
@@ -437,20 +322,17 @@
 </section>
 
 
-<!-- ══ CTA ═══════════════════════════════════════════════ -->
-<section class="section">
+<!-- ══ FINAL CTA ═════════════════════════════════════════ -->
+<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="cta__panel r0">
-      <svg class="cta__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true">
-        <path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.14)" stroke-width="2"/>
-        <path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.09)" stroke-width="2"/>
-      </svg>
+      <img class="cta__nodes" src="assets/symbol.svg" alt="" aria-hidden="true">
       <span class="eyebrow">Let's Talk</span>
       <h2 class="h2 cta__title">Twenty minutes could<br>change your <span class="blue">numbers.</span></h2>
       <p class="lead cta__lead">Tell us where growth is stuck. We'll show you what a real system would look like for your business, and what it takes to build it.</p>
       <div class="cta__btns">
         <a href="get-started.html" class="btn btn--primary">
-          Book a Strategy Call
+          Book a free call
           <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="services.html" class="btn btn--ghost">See what we build</a>
@@ -461,19 +343,15 @@
 </section>
 
 
-<!-- ══ FOOTER (bright) ═══════════════════════════════════ -->
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
 <footer class="foot">
   <div class="wrap">
     <div class="foot__grid">
       <div>
-        <a href="/" class="brand" aria-label="BlitzAI Solutions home">
-          <img class="brand__badge" src="assets/badge.svg" alt="" width="38" height="38">
-          <span class="brand__word">
-            <span class="brand__name">Blitz<em>AI</em></span>
-            <span class="brand__sub">SOLUTIONS</span>
-          </span>
+        <a href="/" class="brand" aria-label="Blitz AI Solutions home">
+          <img class="brand__lockup" src="assets/lockup.svg" alt="Blitz AI Solutions">
         </a>
-        <p class="foot__brand-desc">We build the system that brings you customers, then hand it over in your name. More revenue, less time, lower cost, and you own all of it.</p>
+        <p class="foot__brand-desc">We build the sales system that brings you customers, then hand it over in your name. More revenue, less time, lower cost, and you own all of it.</p>
         <div class="foot__legal">
           <div>BlitzAI Solutions LLC, registered in Delaware</div>
           <div>16 West 68th Street, New York, NY 10023</div>
@@ -489,7 +367,7 @@
           <li><a href="services.html#outbound">Outbound &amp; Prospecting</a></li>
           <li><a href="services.html#ai">AI Sales Agents</a></li>
           <li><a href="services.html#crm">CRM &amp; Revenue Ops</a></li>
-          <li><a href="services.html#content">Answer-Engine Optimization</a></li>
+          <li><a href="services.html#content">Content &amp; AEO</a></li>
         </ul>
       </div>
 
@@ -497,10 +375,10 @@
         <div class="foot__col-label">Company</div>
         <ul class="foot__links">
           <li><a href="/">Home</a></li>
-          <li><a href="how-we-work.html">How We Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="team.html">Team</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="get-started.html">Book a free call</a></li>
         </ul>
       </div>
 
@@ -523,7 +401,7 @@
     </div>
 
     <div class="foot__bottom">
-      <span>&copy; 2025 BlitzAI Solutions LLC. All rights reserved.</span>
+      <span>&copy; 2026 BlitzAI Solutions LLC. All rights reserved.</span>
       <div style="display:flex; gap:20px;">
         <a href="privacy-policy.html">Privacy</a>
         <a href="terms-of-service.html">Terms</a>

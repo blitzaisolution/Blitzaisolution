@@ -1,5 +1,5 @@
 /* ============================================================
-   BlitzAI Solutions · Main JS v4
+   Blitz AI Solutions · Main JS v5 (brand redesign)
    ============================================================ */
 
 /* Activate scroll-reveal styling only when JS is present */
@@ -73,6 +73,46 @@ document.querySelectorAll('.faq__q').forEach(btn => {
   });
 });
 
+/* ============ Custom cursor (brand node) ============ */
+/* Fine pointers only; standard cursor on touch; off under reduced motion.
+   Hidden over iframes (GHL embeds/chat) where the page stops receiving
+   mousemove, so the dot never freezes over an embed. */
+(function () {
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!fine || reduced) return;
+
+  document.documentElement.classList.add('cursor-on');
+  var dot = document.createElement('div');
+  dot.id = 'cursor';
+  dot.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot);
+
+  var x = -100, y = -100, cx = -100, cy = -100, raf = null;
+  function loop() {
+    cx += (x - cx) * 0.3;
+    cy += (y - cy) * 0.3;
+    dot.style.left = cx + 'px';
+    dot.style.top = cy + 'px';
+    raf = (Math.abs(x - cx) > 0.2 || Math.abs(y - cy) > 0.2) ? requestAnimationFrame(loop) : null;
+  }
+  document.addEventListener('mousemove', function (e) {
+    x = e.clientX; y = e.clientY;
+    dot.classList.add('on');
+    if (!raf) raf = requestAnimationFrame(loop);
+  }, { passive: true });
+
+  document.addEventListener('mouseover', function (e) {
+    var t = e.target;
+    if (t.tagName === 'IFRAME') { dot.classList.remove('on'); return; }
+    dot.classList.add('on');
+    var grow = t.closest && t.closest('a, button, input, textarea, select, [role="button"], .faq__q');
+    dot.classList.toggle('grow', !!grow);
+  }, { passive: true });
+
+  document.documentElement.addEventListener('mouseleave', function () { dot.classList.remove('on'); });
+})();
+
 /* ============ CTA popup (marketing pages, once per session) ============ */
 (function () {
   if (document.body.dataset.pop !== '1') return;
@@ -91,23 +131,20 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     wrap.className = 'pop';
     wrap.setAttribute('role', 'dialog');
     wrap.setAttribute('aria-modal', 'true');
-    wrap.setAttribute('aria-label', 'Book a free strategy call');
+    wrap.setAttribute('aria-label', 'Book a free call');
     wrap.innerHTML =
       '<div class="pop__back"></div>' +
       '<div class="pop__card">' +
-        '<svg class="pop__slash" viewBox="0 0 200 240" fill="none" aria-hidden="true">' +
-          '<path d="M58 214 L112 26 L146 26 L92 214 Z" stroke="rgba(47,94,240,0.13)" stroke-width="2"/>' +
-          '<path d="M110 214 L164 26 L198 26 L144 214 Z" stroke="rgba(47,94,240,0.07)" stroke-width="2"/>' +
-        '</svg>' +
+        '<img class="pop__nodes" src="assets/symbol.svg" alt="" aria-hidden="true">' +
         '<button class="pop__x" aria-label="Close">' +
           '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>' +
         '</button>' +
-        '<img class="pop__badge" src="assets/badge.svg" alt="" width="42" height="42">' +
-        '<span class="pop__eyebrow">Free 20-Minute Strategy Call</span>' +
+        '<img class="pop__badge" src="assets/symbol.svg" alt="" width="46" height="35">' +
+        '<span class="pop__eyebrow">Free 20-Minute Call</span>' +
         '<div class="pop__title">Want more customers<br>without more <span style="color:var(--blue)">busywork?</span></div>' +
-        '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a growth system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
+        '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a sales system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
         '<div class="pop__btns">' +
-          '<a href="get-started.html" class="btn btn--primary">Get Started</a>' +
+          '<a href="get-started.html" class="btn btn--primary">Book a free call</a>' +
           '<button class="pop__later">Maybe later</button>' +
         '</div>' +
       '</div>';
