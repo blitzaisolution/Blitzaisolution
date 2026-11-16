@@ -75,8 +75,11 @@ document.querySelectorAll('.faq__q').forEach(btn => {
 
 /* ============ Custom cursor (brand node) ============ */
 /* Fine pointers only; standard cursor on touch; off under reduced motion.
-   Hidden over iframes (GHL embeds/chat) where the page stops receiving
-   mousemove, so the dot never freezes over an embed. */
+   The last position is kept in sessionStorage so the dot is already in
+   place on the next page instead of flashing out during navigation.
+   Over third-party embeds (GHL iframes / the chat widget custom element)
+   the dot hides and the embed's own cursor takes over: a cross-origin
+   iframe always draws its own cursor, so one visible cursor beats two. */
 (function () {
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -88,7 +91,21 @@ document.querySelectorAll('.faq__q').forEach(btn => {
   dot.setAttribute('aria-hidden', 'true');
   document.body.appendChild(dot);
 
+  var KEY = 'bz-cursor-pos';
   var x = -100, y = -100, cx = -100, cy = -100, raf = null;
+
+  /* restore position from the previous page so navigation doesn't flash */
+  try {
+    var saved = sessionStorage.getItem(KEY);
+    if (saved) {
+      var p = saved.split(',');
+      x = cx = parseFloat(p[0]); y = cy = parseFloat(p[1]);
+      dot.style.left = cx + 'px';
+      dot.style.top = cy + 'px';
+      dot.classList.add('on');
+    }
+  } catch (e) {}
+
   function loop() {
     cx += (x - cx) * 0.3;
     cy += (y - cy) * 0.3;
@@ -96,22 +113,45 @@ document.querySelectorAll('.faq__q').forEach(btn => {
     dot.style.top = cy + 'px';
     raf = (Math.abs(x - cx) > 0.2 || Math.abs(y - cy) > 0.2) ? requestAnimationFrame(loop) : null;
   }
+
+  function overEmbed(e) {
+    var path = e.composedPath ? e.composedPath() : [e.target];
+    for (var i = 0; i < path.length; i++) {
+      var n = path[i];
+      if (!n.tagName) continue;
+      if (n.tagName === 'IFRAME' || n.tagName.indexOf('-') !== -1) return true;
+    }
+    return false;
+  }
+
   document.addEventListener('mousemove', function (e) {
     x = e.clientX; y = e.clientY;
-    dot.classList.add('on');
+    try { sessionStorage.setItem(KEY, x + ',' + y); } catch (err) {}
+    dot.classList.toggle('on', !overEmbed(e));
     if (!raf) raf = requestAnimationFrame(loop);
   }, { passive: true });
 
   document.addEventListener('mouseover', function (e) {
-    var t = e.target;
-    if (t.tagName === 'IFRAME') { dot.classList.remove('on'); return; }
+    if (overEmbed(e)) { dot.classList.remove('on'); return; }
     dot.classList.add('on');
-    var grow = t.closest && t.closest('a, button, input, textarea, select, [role="button"], .faq__q');
+    var t = e.target;
+    var grow = t.closest && t.closest('a, button, input, textarea, select, [role="button"], .faq__q, .xp__head');
     dot.classList.toggle('grow', !!grow);
   }, { passive: true });
 
   document.documentElement.addEventListener('mouseleave', function () { dot.classList.remove('on'); });
 })();
+
+/* ── Expandable service cards (home) ── */
+document.querySelectorAll('.xp__head').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var card = btn.closest('.xp');
+    var open = card.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    var body = card.querySelector('.xp__body');
+    if (body) body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
+  });
+});
 
 /* ============ CTA popup (marketing pages, once per session) ============ */
 (function () {
@@ -141,7 +181,7 @@ document.querySelectorAll('.faq__q').forEach(btn => {
         '</button>' +
         '<img class="pop__badge" src="assets/symbol.svg" alt="" width="46" height="35">' +
         '<span class="pop__eyebrow">Free 20-Minute Call</span>' +
-        '<div class="pop__title">Want more customers<br>without more <span style="color:var(--blue)">busywork?</span></div>' +
+        '<div class="pop__title">Want more customers<br>without more <span class="blue">busywork?</span></div>' +
         '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a sales system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
         '<div class="pop__btns">' +
           '<a href="get-started.html" class="btn btn--primary">Book a free call</a>' +
