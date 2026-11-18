@@ -252,3 +252,43 @@ document.querySelectorAll('.xp__head').forEach(function (btn) {
   }
   build();
 })();
+
+/* Steps carousel indicator (mobile): branded line-and-dot swipe cue */
+(function () {
+  var steps = document.querySelector('.steps');
+  if (!steps) return;
+  var cards = steps.querySelectorAll('.step');
+  if (cards.length < 2) return;
+  var ind = document.createElement('div');
+  ind.className = 'bz-ind';
+  ind.setAttribute('aria-hidden', 'true');
+  for (var i = 0; i < cards.length; i++) {
+    if (i > 0) {
+      var line = document.createElement('span');
+      line.className = 'bz-ind__line';
+      ind.appendChild(line);
+    }
+    var dot = document.createElement('span');
+    dot.className = 'bz-ind__dot' + (i === 0 ? ' on' : '');
+    ind.appendChild(dot);
+  }
+  steps.parentNode.insertBefore(ind, steps.nextSibling);
+  var dots = ind.querySelectorAll('.bz-ind__dot');
+  var ticking = false;
+  steps.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      ticking = false;
+      var mid = steps.scrollLeft + steps.clientWidth / 2;
+      var best = 0, bestDist = Infinity;
+      for (var j = 0; j < cards.length; j++) {
+        var c = cards[j];
+        var center = c.offsetLeft + c.offsetWidth / 2;
+        var d = Math.abs(center - mid);
+        if (d < bestDist) { bestDist = d; best = j; }
+      }
+      for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('on', k === best);
+    });
+  }, { passive: true });
+})();

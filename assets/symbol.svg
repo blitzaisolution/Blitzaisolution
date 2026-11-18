@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429.38 326.61">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424.23 322.69">
   <defs>
     <style>
       .cls-1 {
         fill: #4b8aef;
+        stroke-width: 4.32px;
       }
 
       .cls-1, .cls-2 {
         stroke: #4b8aef;
         stroke-miterlimit: 10;
-        stroke-width: 4.37px;
       }
 
       .cls-2 {
         fill: none;
+        stroke-width: 10.73px;
       }
     </style>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
     <g>
-      <polyline class="cls-2" points="296.56 31.19 170.88 135.34 398.18 135.34"/>
-      <polyline class="cls-2" points="279.05 225.23 170.88 135.34 96.22 295.41"/>
-      <polyline class="cls-2" points="31.19 176.7 170.88 135.34 89.21 31.19"/>
-      <circle class="cls-1" cx="170.88" cy="135.34" r="29.01"/>
-      <circle class="cls-1" cx="296.56" cy="31.19" r="29.01"/>
-      <circle class="cls-1" cx="398.18" cy="135.34" r="29.01"/>
-      <circle class="cls-1" cx="279.05" cy="225.23" r="29.01"/>
-      <circle class="cls-1" cx="96.22" cy="295.41" r="29.01"/>
-      <circle class="cls-1" cx="31.19" cy="176.7" r="29.01"/>
-      <circle class="cls-1" cx="89.21" cy="31.19" r="29.01"/>
+      <polyline class="cls-2" points="293 30.82 168.83 133.72 393.41 133.72"/>
+      <polyline class="cls-2" points="275.71 222.52 168.83 133.72 95.06 291.87"/>
+      <polyline class="cls-2" points="30.82 174.58 168.83 133.72 88.14 30.82"/>
+      <circle class="cls-1" cx="168.83" cy="133.72" r="28.66"/>
+      <circle class="cls-1" cx="293" cy="30.82" r="28.66"/>
+      <circle class="cls-1" cx="393.41" cy="133.72" r="28.66"/>
+      <circle class="cls-1" cx="275.71" cy="222.52" r="28.66"/>
+      <circle class="cls-1" cx="95.06" cy="291.87" r="28.66"/>
+      <circle class="cls-1" cx="30.82" cy="174.58" r="28.66"/>
+      <circle class="cls-1" cx="88.14" cy="30.82" r="28.66"/>
     </g>
   </g>
 </svg>

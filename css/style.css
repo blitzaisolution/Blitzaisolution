@@ -713,3 +713,38 @@ ul, ol { list-style: none; }
   .cc__actions { flex-direction: row; }
   .cc__btn { flex: 1; padding: 11px 14px; font-size: 13px; }
 }
+
+/* ══ AUDIT ROUND 2 ═══════════════════════════════════ */
+
+/* Small text stays readable on the dark gradient: Regular below 16px,
+   Light reserved for 16px+ body, Ultralight for large display only. */
+.xp__desc, .xp__li, .pillar__desc, .pillar__li, .ncard__excerpt, .post li,
+.faq__ans, .stat__label, .foot__brand-desc, .foot__legal, .foot__links a,
+.foot__bottom, .svc-cap__d, .svc-block__benefit, .cc__text, .pop__text,
+.tc p, .commit__text, .step__desc { font-weight: 400; }
+
+/* Ownership note under the two-card comparison */
+p.callout__text {
+  margin: 40px auto 0; max-width: 700px; text-align: center;
+  font-size: 15.5px; line-height: 1.8; color: var(--body);
+  padding-top: 28px; border-top: 1px solid var(--line-2);
+}
+
+/* Brand element: line-and-dot indicator (Brand Guidelines p.34/48) */
+.bz-ind { display: none; align-items: center; justify-content: center; margin-top: 20px; }
+.bz-ind__dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(74,138,240,0.35); transition: background .25s ease, transform .25s ease; flex-shrink: 0; }
+.bz-ind__dot.on { background: var(--blue); transform: scale(1.25); }
+.bz-ind__line { width: 30px; height: 2px; background: rgba(74,138,240,0.25); flex-shrink: 0; }
+
+/* Process steps become a swipeable carousel on small screens */
+@media (max-width: 720px) {
+  .steps { flex-direction: row; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin: 0 -16px; padding: 4px 16px 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .steps::-webkit-scrollbar { display: none; }
+  .steps .step {
+    min-width: 82%; scroll-snap-align: center; grid-template-columns: 1fr; gap: 8px;
+    background: var(--surface, rgba(78,77,77,0.42)); border: 1px solid var(--line-2);
+    border-radius: 20px; padding: 24px 22px;
+  }
+  .steps .step:last-child { border-bottom: 1px solid var(--line-2); }
+  .bz-ind { display: flex; }
+}
