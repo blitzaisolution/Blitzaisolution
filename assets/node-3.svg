@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 695.71 799.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4b8aef;
+        stroke-width: 4.37px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #4b8aef;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: 6px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <polyline class="cls-2" points="577.91 682.33 431.38 308.63 260.35 769.24"/>
+      <polyline class="cls-2" points="29.84 591.82 431.38 308.63 117.86 142.2"/>
+      <polyline class="cls-2" points="438.49 29.84 431.38 308.63 665.88 319.33"/>
+      <circle class="cls-1" cx="431.38" cy="308.63" r="27.65"/>
+      <circle class="cls-1" cx="577.91" cy="682.33" r="27.65"/>
+      <circle class="cls-1" cx="260.35" cy="769.24" r="27.65"/>
+      <circle class="cls-1" cx="29.84" cy="591.82" r="27.65"/>
+      <circle class="cls-1" cx="117.86" cy="142.2" r="27.65"/>
+      <circle class="cls-1" cx="438.49" cy="29.84" r="27.65"/>
+      <circle class="cls-1" cx="665.88" cy="319.33" r="27.65"/>
+    </g>
+  </g>
+</svg>
