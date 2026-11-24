@@ -167,6 +167,8 @@ document.querySelectorAll('.xp__head').forEach(function (btn) {
     shown = true;
     try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
 
+    var pageNode = document.querySelector('.hero__nodes, .subhero__nodes');
+    var nodeSrc = pageNode ? pageNode.getAttribute('src') : 'assets/node-1.svg';
     var wrap = document.createElement('div');
     wrap.className = 'pop';
     wrap.setAttribute('role', 'dialog');
@@ -175,12 +177,12 @@ document.querySelectorAll('.xp__head').forEach(function (btn) {
     wrap.innerHTML =
       '<div class="pop__back"></div>' +
       '<div class="pop__card">' +
-        '<img class="pop__nodes" src="assets/symbol.svg" alt="" aria-hidden="true">' +
+        '<img class="pop__nodes" src="' + nodeSrc + '" alt="" aria-hidden="true">' +
         '<button class="pop__x" aria-label="Close">' +
           '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>' +
         '</button>' +
-        '<img class="pop__badge" src="assets/symbol.svg" alt="" width="46" height="35">' +
-        '<span class="pop__eyebrow">Free 20-Minute Call</span>' +
+        '<img class="pop__badge" src="assets/symbol.svg?v=2" alt="" width="46" height="35">' +
+        '<span class="pop__eyebrow">Free 30-Minute Call</span>' +
         '<div class="pop__title">Want more customers<br>without more <span class="blue">busywork?</span></div>' +
         '<p class="pop__text">Tell us how you sell today and we\'ll show you exactly what a sales system would do for your numbers. No pitch, no pressure, and you keep the plan either way.</p>' +
         '<div class="pop__btns">' +
